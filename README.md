@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Descrizione progetto:
 
-## Getting Started
+Sito web progettato su misura che mostra il portfolio fotografico di un amico.
 
-First, run the development server:
+# Obiettivi:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Design personalizzato
+- Velocità
+- Responsiveness
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Tech stack:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Design: Figma (prototipazione)
+- Frontend/backend: Next.js (ottimizzazione SEO)
+- Storage: Google Drive per archiviazione delle foto
+- Styling: Css customizzato (no librerie esterne)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Fasi di sviluppo:
 
-## Learn More
+### 1 Progettazione del sito su Figma
 
-To learn more about Next.js, take a look at the following resources:
+- 1.1 discussione preliminare con il 'cliente' riguardo il prodotto richiesto
+- 1.2 creazione del prototipo su Figma
+- 1.3 incontro con il cliente per visione del prototipo e modifiche/aggiunte eventuali
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2 Sviluppo codice:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 2.1 creazione progetto su Next.js e configurazione struttura
+- 2.2 (FE) sviluppo componenti (Header, Footer, ImageCard etc.)
+- 2.3 (FE) sviluppo pagine/sezioni
+- 2.4 (FE) creazione versioni responsive del sito
+- 2.5 (BE) creazione server backend
+- 2.6 (BE) sviluppo logica per fetch immagini da Google Drive
+- 2.7 (BE) creazione e implementazione file JSON per dati foto
 
-## Deploy on Vercel
+### 3 Testing:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- 3.1 performance-test con Lighthouse per calcolo tempi caricamento
+  - 3.1.1 ottimizzazione performance se necessario
+- 3.2 cross-browser-test su altri browser (Firefox, Safari)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4 Deployment:
+
+- 4.1 deployment su Vercel/Netlify
+- 4.2 acquisto e configurazione dominio (?)
+
+# Note:
+
+- usare cashing per caricare in tempi migliori le immagini da google drive
+- valutare utilizzo di cloud storage (no perchè l'opzione al momento migliore free - Cloudinary - ha un limite per file di max 10mb)
