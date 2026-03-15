@@ -8,10 +8,10 @@ export default function Navbar() {
             </ul>
 
             <ul className={styles.right}>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Link...</a></li>
+                <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
     )
