@@ -49,10 +49,11 @@
 
 .intro p {
   max-width: 440px;
-  font-size: 18px;
+  font-size: var(--text-h4);
   line-height: 32px;
   text-wrap: balance;
-  color: var(--text-secondary);
+  color: var(--dirty-white);
+  color: rgb(225, 217, 217);
 }
 
 .intro a {
