@@ -40,7 +40,7 @@
   --radius-lg: 16px;
 
   /* OTHER COSTANTS */
-  --navbar-height: 600px;
+  --navbar-height: 60px;
 }
 
 @media (prefers-color-scheme: dark) {
