@@ -6,14 +6,12 @@
 }
 
 .vertical {
-    width: 200px;
-    height: 350px;
+    aspect-ratio: 2 / 3;
 }
 
 
 .horizontal {
-    width: 350px;
-    height: 200px;
+    aspect-ratio: 3 / 2;    
 }
 
 .image {
