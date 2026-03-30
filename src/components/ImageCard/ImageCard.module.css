@@ -1,0 +1,21 @@
+.cardContainer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.vertical {
+    width: 200px;
+    height: 350px;
+}
+
+
+.horizontal {
+    width: 350px;
+    height: 200px;
+}
+
+.image {
+    object-fit: cover;
+}

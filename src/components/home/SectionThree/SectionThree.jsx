@@ -7,6 +7,8 @@ export default function SectionThree( { title, subtitle }) {
       <h2 className={styles.title}>PORTFOLIO</h2>
       <div className={styles.imagesGrid}>
           <ImageCard src="/home/sample-img-horizontal.jpg" orientation="horizontal" />
+          <ImageCard src="/home/sample-img-vertical.jpg" orientation="vertical" />
+          <ImageCard src="/home/sample-img-horizontal.jpg" orientation="horizontal" />
       </div>
     </section>
   )
