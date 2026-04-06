@@ -3,6 +3,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    border-radius: var(--radius-md);
 }
 
 .vertical {

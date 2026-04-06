@@ -9,6 +9,12 @@ export default function SectionThree( { title, subtitle }) {
           <ImageCard src="/home/sample-img-horizontal.jpg" orientation="horizontal" />
           <ImageCard src="/home/sample-img-vertical.jpg" orientation="vertical" />
           <ImageCard src="/home/sample-img-horizontal.jpg" orientation="horizontal" />
+          <ImageCard src="/home/sample-img-vertical.jpg" orientation="vertical" />
+          <ImageCard src="/home/sample-img-vertical.jpg" orientation="vertical" />
+          <ImageCard src="/home/sample-img-vertical.jpg" orientation="vertical" />
+          <ImageCard src="/home/sample-img-horizontal.jpg" orientation="horizontal" />
+          <ImageCard src="/home/sample-img-horizontal.jpg" orientation="horizontal" />
+          <ImageCard src="/home/sample-img-vertical.jpg" orientation="vertical" />
       </div>
     </section>
   )
