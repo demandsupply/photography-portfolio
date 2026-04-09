@@ -21,7 +21,11 @@ export default function SectionFour() {
 						alt={category.alt}
 						orientation={category.orientation}
 						className={styles.categoryCard} 
-					/>
+					>
+						<div className={styles.categoryOverlay}>
+							<h3>{category.alt}</h3>
+						</div>
+					</ImageCard>
 				))}
 			</div>
 		</section>

@@ -18,6 +18,7 @@
 .subtitle {
     font-size: 24px;
     margin: var(--spacing-lg) auto;
+    white-space: pre-wrap;
 }
 
 .categoriesContainer {
@@ -32,4 +33,5 @@
 .categoryCard {
     width: 100%;
     border-radius: var(--radius-md);
+    transition: .3s;
 }
