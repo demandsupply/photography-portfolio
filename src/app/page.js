@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import HeroSection from "@/components/home/HeroSection/HeroSection";
 import SectionTwo from "@/components/home/SectionTwo/SectionTwo";
 import SectionThree from "@/components/home/SectionThree/SectionThree";
+import SectionFour from "@/components/home/SectionFour/SectionFour";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <HeroSection title="PROVA" image="/home/sample-img.webp" />
         <SectionTwo />
         <SectionThree />
+        <SectionFour />
       </main>
     </div>
   );

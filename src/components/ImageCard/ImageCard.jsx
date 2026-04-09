@@ -3,9 +3,9 @@ import styles from './ImageCard.module.css'
 
 
 
-export default function ImageCard( { src, alt, category, orientation} ) {
+export default function ImageCard( { src, alt, category, orientation, className=""} ) {
 
-    const cardClassName = `${styles.cardContainer} ${styles[orientation]}`;
+    const cardClassName = `${styles.cardContainer} ${styles[orientation]} ${className}`;
 
     return (
         <div className={cardClassName}>
