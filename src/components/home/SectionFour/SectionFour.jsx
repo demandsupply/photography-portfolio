@@ -7,12 +7,13 @@ const CATEGORIES = [
 	{ id:3, src: "/home/sample-img-horizontal.jpg", alt: "Landscapes", orientation: "horizontal"},
 	{ id:4, src: "/home/sample-img-horizontal.jpg", alt: "Still Life", orientation: "horizontal"}
 ]
+const categoriesList = CATEGORIES.map(category => category.alt).join("  |  ");
 
 export default function SectionFour() {
 	return(
 		<section className={styles.sectionFour}>
 			<p className={styles.title}>Portfolio</p>
-			<p className={styles.subtitle}>Portraits  |  Events  |  Landscapes  |  Still Life</p>
+			<p className={styles.subtitle}>{categoriesList}</p>
 			<div className={styles.categoriesContainer}>
 				{CATEGORIES.map((category) => (
 					<ImageCard
