@@ -42,6 +42,7 @@
   /* OTHER COSTANTS */
   --navbar-height: 60px;
   --section-max-width: 1200px;
+  --footer-max-width: 1200px;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -6,19 +6,19 @@ import { FiFacebook } from "react-icons/fi";
 
 export default function Footer() {
 	return(
-		<footer>
+		<footer className={styles.footer}>
 			<div className={styles.footerGrid}>
 				<section className={styles.column}>
-					<h3>SCPhotos</h3>
+					<h3 className={styles.columnTitle}>SCPhotos</h3>
 					<div className={styles.socialsContainer}>
 						<a href="#"><FaInstagram size={24}/></a>
 						<a href="#"><FiFacebook size={24}/></a>
 					</div>
 				</section>
 
-				<nav aria-labelledby="footer-sitemap">
-					<h3>Site Map</h3>
-					<ul>
+				<nav aria-labelledby="footer-sitemap" className={styles.column}>
+					<h3 className={styles.columnTitle}>Site Map</h3>
+					<ul className={styles.columnList}>
 						<li><a href="#">Home</a></li>
 						<li><a href="#">Portfolio</a></li>
 						<li><a href="#">About</a></li>
@@ -28,16 +28,16 @@ export default function Footer() {
 				</nav>
 
 				<section className={styles.column}>
-					<h3>Keep in Touch</h3>
+					<h3 className={styles.columnTitle}>Keep in Touch</h3>
 					<div className={styles.contactsContainer}>
 						<p>Email: <span>scphotos@gmail.com</span></p>
 						<p>Phone: <span>+39 320 567 9838</span></p>
 					</div>
 				</section>
 
-				<nav aria-labelledby="footer-useful-links">
-					<h3>Useful Links</h3>
-					<ul>
+				<nav aria-labelledby="footer-useful-links" className={styles.column}>
+					<h3 className={styles.columnTitle}>Useful Links</h3>
+					<ul className={styles.columnList}>
 						<li><a href="#">Privacy Policy</a></li>
 						<li><a href="#">Cookie Policy</a></li>
 					</ul>
@@ -45,7 +45,7 @@ export default function Footer() {
 				
 			</div>
 			<div className={styles.footerBottom}>
-				<p>© 2026. Stefano Scalon - Tutti i diritti sono riservati.</p>
+				<p><small>© 2026. Stefano Scalon - Tutti i diritti sono riservati.</small></p>
 			</div>
 		</footer>	
 	)
