@@ -1,8 +1,8 @@
 :root {
 
     /* COLORS */
-  --background: #846cd8;
-  --foreground: #171717;
+  --background: var(--dirty-white);
+  --foreground: var(--almost-black);
 
   /* color palette */
   --dirty-white: #F0F5F9;
