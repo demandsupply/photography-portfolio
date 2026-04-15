@@ -13,6 +13,7 @@
 .title {
     margin-top: var(--spacing-xl);
     font-size: var(--text-h2);
+    letter-spacing: 0.1em;
 }
 
 .subtitle {

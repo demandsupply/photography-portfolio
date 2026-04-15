@@ -1,8 +1,10 @@
 .nav {
+    padding: 0 var(--spacing-md);
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--almost-black);
+    background-color: transparent;
     color: var(--dirty-white);
     height: var(--navbar-height);
 }
@@ -14,5 +16,7 @@
 }
 
 .nav a {
-    padding: 20px;
+    padding: 16px;
+    font-size: var(--text-xl);
+    font-weight: 600;
 }

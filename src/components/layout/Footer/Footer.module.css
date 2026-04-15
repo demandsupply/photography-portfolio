@@ -22,7 +22,10 @@
     justify-content: center;
     gap: var(--spacing-xl);
 }
+
 .columnTitle {
+    font-size: var(--text-xl);
+    font-weight: 500;
     margin-bottom: var(--spacing-md);
 }
 
@@ -50,6 +53,6 @@
 }
 
 .footerBottom {
-    margin-top: var(--spacing-xl);
+    margin-top: var(--spacing-xxl);
     margin-bottom: var(--spacing-sm);
 }

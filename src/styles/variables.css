@@ -10,6 +10,9 @@
   --dark-grey: #52616B;
   --almost-black: #1E2022;
 
+  /* buttons */
+  --primary-color: var(--dirty-white);
+  --secondary-color: #1b1b1d;
 
   /* SPACING */
   --spacing-xs: 4px;
@@ -17,6 +20,7 @@
   --spacing-md: 16px;
   --spacing-lg: 32px;
   --spacing-xl: 64px;
+  --spacing-xxl: 96px;
 
   /* FONT FAMILY */
   --font-primary: 'fing', sans-serif;

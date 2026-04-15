@@ -12,7 +12,7 @@ const categoriesList = CATEGORIES.map(category => category.alt).join("  |  ");
 export default function SectionFour() {
 	return(
 		<section className={styles.sectionFour}>
-			<p className={styles.title}>Portfolio</p>
+			<h2 className={styles.title}>Portfolio</h2>
 			<p className={styles.subtitle}>{categoriesList}</p>
 			<div className={styles.categoriesContainer}>
 				{CATEGORIES.map((category) => (

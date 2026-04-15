@@ -4,7 +4,7 @@ import styles from "./SectionThree.module.css"
 export default function SectionThree( { title, subtitle }) {
   return(
     <section className={styles.sectionThree}>
-      <h2 className={styles.title}>SELECTED WORKS</h2>
+      <h2 className={styles.title}>Selected Works</h2>
       <div className={styles.imagesGrid}>
         <div className={styles.column}>
           <ImageCard src="/home/sample-img-horizontal.jpg" orientation="horizontal" />
