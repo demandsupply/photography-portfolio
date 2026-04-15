@@ -10,7 +10,8 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <HeroSection title="PROVA" image="/home/sample-img.webp" />
+        {/* <HeroSection title="PROVA" image="/home/sample-img.webp" /> */}
+        <HeroSection image="/home/sample-img.webp" />
         <SectionTwo />
         <SectionThree />
         <SectionFour />
