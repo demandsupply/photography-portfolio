@@ -4,6 +4,7 @@ import HeroSection from "@/components/home/HeroSection/HeroSection";
 import SectionTwo from "@/components/home/SectionTwo/SectionTwo";
 import SectionThree from "@/components/home/SectionThree/SectionThree";
 import SectionFour from "@/components/home/SectionFour/SectionFour";
+import SectionFive from "@/components/home/SectionFive/SectionFive";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <SectionTwo />
         <SectionThree />
         <SectionFour />
+        <SectionFive />
       </main>
     </div>
   );
