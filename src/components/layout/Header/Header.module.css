@@ -1,10 +1,18 @@
 .headerContainer {
+    width: 100%;
+    z-index: 999; 
+    transition: background-color 0.3s ease;
+}
+
+.headerHome {
     position: absolute; 
     top: 0;
     left: 0;
-    width: 100%;
-    z-index: 999; 
-    
     background-color: transparent; 
     background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 100%);
+}
+
+.headerPages {
+    position: relative;
+    background-color: var(--almost-black); 
 }
