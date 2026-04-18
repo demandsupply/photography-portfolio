@@ -1,0 +1,24 @@
+.main {
+    border: 1px solid #000;
+}
+.title {
+    margin: var(--spacing-lg) auto;
+    width: fit-content;
+    font-size: var(--text-h1);
+    letter-spacing: 0.1em;
+}
+
+.categoriesContainer {
+    width: 60%;
+    margin: var(--spacing-xxl) auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+}
+
+.categoryCard {
+    width: 100%;
+    border-radius: var(--radius-md);
+    transition: .3s;
+}

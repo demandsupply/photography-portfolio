@@ -1,34 +1,29 @@
-import styles from "./SectionFour.module.css"
-import ImageCard from "@/components/ImageCard/ImageCard"
+import styles from "./SectionFour.module.css";
+import ImageCard from "@/components/ImageCard/ImageCard";
+import { CATEGORIES } from "@/data/categories";
 
-const CATEGORIES = [
-	{ id:1, src: "/home/sample-img-horizontal.jpg", alt: "Portraits", orientation: "horizontal"},
-	{ id:2, src: "/home/sample-img-horizontal.jpg", alt: "Events",  orientation: "horizontal"},
-	{ id:3, src: "/home/sample-img-horizontal.jpg", alt: "Landscapes", orientation: "horizontal"},
-	{ id:4, src: "/home/sample-img-horizontal.jpg", alt: "Still Life", orientation: "horizontal"}
-]
-const categoriesList = CATEGORIES.map(category => category.alt).join("  |  ");
+const categoriesList = CATEGORIES.map((category) => category.alt).join("  |  ");
 
 export default function SectionFour() {
-	return(
-		<section className={styles.sectionFour}>
-			<h2 className={styles.title}>Portfolio</h2>
-			<p className={styles.subtitle}>{categoriesList}</p>
-			<div className={styles.categoriesContainer}>
-				{CATEGORIES.map((category) => (
-					<ImageCard
-						key={category.id}
-						src={category.src}
-						alt={category.alt}
-						orientation={category.orientation}
-						className={styles.categoryCard} 
-					>
-						<div className={styles.categoryOverlay}>
-							<h3>{category.alt}</h3>
-						</div>
-					</ImageCard>
-				))}
-			</div>
-		</section>
-	)
+  return (
+    <section className={styles.sectionFour}>
+      <h2 className={styles.title}>Portfolio</h2>
+      <p className={styles.subtitle}>{categoriesList}</p>
+      <div className={styles.categoriesContainer}>
+        {CATEGORIES.map((category) => (
+          <ImageCard
+            key={category.id}
+            src={category.src}
+            alt={category.alt}
+            orientation={category.orientation}
+            className={styles.categoryCard}
+          >
+            <div className={styles.categoryOverlay}>
+              <h3>{category.alt}</h3>
+            </div>
+          </ImageCard>
+        ))}
+      </div>
+    </section>
+  );
 }
