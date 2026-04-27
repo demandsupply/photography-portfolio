@@ -1,0 +1,90 @@
+{
+  "portraits": [
+    {
+      "id": "p01",
+      "title": "Luce d'Inverno",
+      "fullRes": "/gallery/portraits/p01-full.jpg",
+      "thumb": "/gallery/portraits/p01-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "p02",
+      "title": "Sguardo Profondo",
+      "fullRes": "/gallery/portraits/p02-full.jpg",
+      "thumb": "/gallery/portraits/p02-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "p03",
+      "title": "Profilo Urbano",
+      "fullRes": "/gallery/portraits/p03-full.jpg",
+      "thumb": "/gallery/portraits/p03-thumb.jpg",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "p04",
+      "title": "Eleganza in Bianco",
+      "fullRes": "/gallery/portraits/p04-full.jpg",
+      "thumb": "/gallery/portraits/p04-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "p05",
+      "title": "Riflessi d'Anima",
+      "fullRes": "/gallery/portraits/p05-full.jpg",
+      "thumb": "/gallery/portraits/p05-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "p06",
+      "title": "Espressione Libera",
+      "fullRes": "/gallery/portraits/p06-full.jpg",
+      "thumb": "/gallery/portraits/p06-thumb.jpg",
+      "orientation": "horizontal"
+    }
+  ],
+  "landscapes": [
+    {
+      "id": "l01",
+      "title": "Alba sulle Dolomiti",
+      "fullRes": "/gallery/landscapes/l01-full.jpg",
+      "thumb": "/gallery/landscapes/l01-thumb.jpg",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "l02",
+      "title": "Foresta Nebbiosa",
+      "fullRes": "/gallery/landscapes/l02-full.jpg",
+      "thumb": "/gallery/landscapes/l02-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "l03",
+      "title": "Riflessi sul Lago",
+      "fullRes": "/gallery/landscapes/l03-full.jpg",
+      "thumb": "/gallery/landscapes/l03-thumb.jpg",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "l04",
+      "title": "Orizzonte Infinito",
+      "fullRes": "/gallery/landscapes/l04-full.jpg",
+      "thumb": "/gallery/landscapes/l04-thumb.jpg",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "l05",
+      "title": "Sentiero Perduto",
+      "fullRes": "/gallery/landscapes/l05-full.jpg",
+      "thumb": "/gallery/landscapes/l05-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "l06",
+      "title": "Tramonto Dorato",
+      "fullRes": "/gallery/landscapes/l06-full.jpg",
+      "thumb": "/gallery/landscapes/l06-thumb.jpg",
+      "orientation": "horizontal"
+    }
+  ]
+}
