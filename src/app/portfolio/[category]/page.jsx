@@ -5,9 +5,9 @@ import { CATEGORIES } from "@/data/categories";
 export default async function CategoryGallery({ params }) {
   //   const { category } = await params;
   const obtainedParamsFromURL = await params;
-  const category = obtainedParamsFromURL.category;
+  const categoryName = obtainedParamsFromURL.category;
   const currentCategory = CATEGORIES.find(
-    (category) => category.slug === category,
+    (category) => category.slug === categoryName,
   );
 
   return (
