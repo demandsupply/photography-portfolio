@@ -46,44 +46,86 @@
   "landscapes": [
     {
       "id": "l01",
-      "title": "Alba sulle Dolomiti",
+      "title": "1 - Alba sulle Dolomiti",
       "fullRes": "/gallery/landscapes/l01-full.jpg",
       "thumb": "/gallery/landscapes/l01-thumb.jpg",
       "orientation": "horizontal"
     },
     {
       "id": "l02",
-      "title": "Foresta Nebbiosa",
+      "title": "2 - Foresta Nebbiosa",
       "fullRes": "/gallery/landscapes/l02-full.jpg",
       "thumb": "/gallery/landscapes/l02-thumb.jpg",
       "orientation": "vertical"
     },
     {
       "id": "l03",
-      "title": "Riflessi sul Lago",
+      "title": "3 - Riflessi sul Lago",
       "fullRes": "/gallery/landscapes/l03-full.jpg",
       "thumb": "/gallery/landscapes/l03-thumb.jpg",
       "orientation": "horizontal"
     },
     {
       "id": "l04",
-      "title": "Orizzonte Infinito",
+      "title": "4 - Orizzonte Infinito",
       "fullRes": "/gallery/landscapes/l04-full.jpg",
       "thumb": "/gallery/landscapes/l04-thumb.jpg",
       "orientation": "horizontal"
     },
     {
       "id": "l05",
-      "title": "Sentiero Perduto",
+      "title": "5 - Sentiero Perduto",
       "fullRes": "/gallery/landscapes/l05-full.jpg",
       "thumb": "/gallery/landscapes/l05-thumb.jpg",
       "orientation": "vertical"
     },
     {
       "id": "l06",
-      "title": "Tramonto Dorato",
+      "title": "6 - Tramonto Dorato",
       "fullRes": "/gallery/landscapes/l06-full.jpg",
       "thumb": "/gallery/landscapes/l06-thumb.jpg",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "l07",
+      "title": "7 - Tramonto Dorato",
+      "fullRes": "/gallery/landscapes/l07-full.jpg",
+      "thumb": "/gallery/landscapes/l07-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "l08",
+      "title": "8 - Tramonto Dorato",
+      "fullRes": "/gallery/landscapes/l08-full.jpg",
+      "thumb": "/gallery/landscapes/l08-thumb.jpg",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "l09",
+      "title": "9 - Tramonto Dorato",
+      "fullRes": "/gallery/landscapes/l09-full.jpg",
+      "thumb": "/gallery/landscapes/l09-thumb.jpg",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "l10",
+      "title": "10 - Tramonto Dorato",
+      "fullRes": "/gallery/landscapes/l10-full.jpg",
+      "thumb": "/gallery/landscapes/l10-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "l11",
+      "title": "11 - Tramonto Dorato",
+      "fullRes": "/gallery/landscapes/l11-full.jpg",
+      "thumb": "/gallery/landscapes/l11-thumb.jpg",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "l12",
+      "title": "12 - Tramonto Dorato",
+      "fullRes": "/gallery/landscapes/l12-full.jpg",
+      "thumb": "/gallery/landscapes/l12-thumb.jpg",
       "orientation": "horizontal"
     }
   ]
