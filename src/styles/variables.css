@@ -1,10 +1,11 @@
 :root {
 
     /* COLORS */
-  --background: var(--dirty-white);
+  --background: var(--white);
   --foreground: var(--almost-black);
 
   /* color palette */
+  --white: #ffffff;
   --dirty-white: #F0F5F9;
   --light-grey: #C9D6DF;
   --dark-grey: #52616B;

@@ -6,8 +6,24 @@ import JSONPhotos from "@/data/photos.json";
 
 export default function PhotoGrid({ categoryName }) {
   const PHOTOS = JSONPhotos;
-  const n = 3;
-  let totalColumns = n;
+  // const n = 3;
+  // totalColumns = n;
+
+  const [totalColumns, setTotalColumns] = useState(3);
+
+  useEffect(() => {
+    const handleColumnsNumber = () => {
+      const width = innerWidth;
+      if (width < 480) setTotalColumns(1);
+      else if (width < 768) setTotalColumns(2);
+      else if (width < 1024) setTotalColumns(3);
+      else setTotalColumns(4);
+    };
+
+    handleColumnsNumber();
+
+    window.addEventListener("resize", handleColumnsNumber);
+  });
 
   const columns = useMemo(() => {
     // create n empty arrays
