@@ -41,6 +41,48 @@
       "fullRes": "/gallery/portraits/p06-full.jpg",
       "thumb": "/gallery/portraits/p06-thumb.jpg",
       "orientation": "horizontal"
+    },
+    {
+      "id": "p07",
+      "title": "Espressione Libera",
+      "fullRes": "/gallery/portraits/p07-full.jpg",
+      "thumb": "/gallery/portraits/p07-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "p08",
+      "title": "Espressione Libera",
+      "fullRes": "/gallery/portraits/p08-full.jpg",
+      "thumb": "/gallery/portraits/p08-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "p09",
+      "title": "Espressione Libera",
+      "fullRes": "/gallery/portraits/p09-full.jpg",
+      "thumb": "/gallery/portraits/p09-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "p10",
+      "title": "Espressione Libera",
+      "fullRes": "/gallery/portraits/p10-full.jpg",
+      "thumb": "/gallery/portraits/p10-thumb.jpg",
+      "orientation": "vertical"
+    },
+    {
+      "id": "p11",
+      "title": "Espressione Libera",
+      "fullRes": "/gallery/portraits/p11-full.jpg",
+      "thumb": "/gallery/portraits/p11-thumb.jpg",
+      "orientation": "horizontal"
+    },
+    {
+      "id": "p12",
+      "title": "Espressione Libera",
+      "fullRes": "/gallery/portraits/p12-full.jpg",
+      "thumb": "/gallery/portraits/p12-thumb.jpg",
+      "orientation": "horizontal"
     }
   ],
   "landscapes": [
