@@ -1,7 +1,8 @@
 import Gallery from "@/components/Gallery/Gallery";
 import styles from "./gallery.module.css";
 import { CATEGORIES } from "@/data/categories";
-import PhotoGrid from "@/components/PhotoGrid/PhotoGrid";
+import PhotoGridColumns from "@/components/PhotoGrid/PhotoGridColumns";
+import PhotoGridRows from "@/components/PhotoGrid/PhotoGridRows";
 
 export default async function CategoryGallery({ params }) {
   //   const { category } = await params;
@@ -14,7 +15,8 @@ export default async function CategoryGallery({ params }) {
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>{currentCategory.alt}</h1>
-      <PhotoGrid categoryName={categoryName} />
+      <PhotoGridRows categoryName={categoryName} />
+      {/* <PhotoGridColumns categoryName={categoryName} /> */}
     </main>
   );
 }

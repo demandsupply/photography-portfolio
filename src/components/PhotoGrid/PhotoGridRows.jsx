@@ -4,7 +4,7 @@ import ImageCard from "../ImageCard/ImageCard";
 import styles from "./PhotoGrid.module.css";
 import JSONPhotos from "@/data/photos.json";
 
-export default function PhotoGrid({ categoryName }) {
+export default function PhotoGridRows({ categoryName }) {
   const PHOTOS = JSONPhotos;
 
   // VISUALIZZAZIONE PER RIGHE (altezza righe variabile in base al numero di foto per riga)
