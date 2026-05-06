@@ -18,68 +18,26 @@ export default function PhotoGrid({ categoryName }) {
   // ho un array di foto, calcolo la lugnhezza totale delle foto consecutive, se la lugnhezza è
   //  maggiore della riga toglo l'ultima immagine dalla riga, genero la riga successiva e aggiungo l'immagine
   // ripeti il pattern fino a esaurimento immagini -> cosi ho il n totale di righe e posso generare tutto
-  const [totalColumns, setTotalColumns] = useState(3);
-
-  useEffect(() => {
-    const handleColumnsNumber = () => {
-      const width = innerWidth;
-      if (width < 480) setTotalColumns(1);
-      else if (width < 768) setTotalColumns(2);
-      else if (width < 1024) setTotalColumns(3);
-      else setTotalColumns(4);
-    };
-
-    handleColumnsNumber();
-
-    window.addEventListener("resize", handleColumnsNumber);
-  });
-
-  const columns = useMemo(() => {
-    // create n empty arrays
-    const result = Array.from({ length: totalColumns }, () => []);
-    console.log("result: ");
-    console.log(result);
-
-    // keep track of column heights
-    const columnHeights = Array.from({ length: totalColumns }, () => 0);
-    console.log(columnHeights);
-
-    PHOTOS[categoryName].map((element) => {
-      const shortestColumnIndex = columnHeights.indexOf(
-        Math.min(...columnHeights),
-      );
-
-      result[shortestColumnIndex].push(element);
-
-      const ratio = element.orientation === "vertical" ? 1.5 : 0.66;
-      columnHeights[shortestColumnIndex] += ratio;
-    });
-
-    return result;
-  }, [categoryName, totalColumns, PHOTOS]);
 
   const [rowsWidth, setRowsWidth] = useState(700);
 
   useEffect(() => {
     const handleRowsWidth = () => {
-      const width = innerWidth;
-      if (width < 480) setRowsWidth(480);
-      else if (width < 768) setRowsWidth(768);
-      else if (width < 1024) setRowsWidth(1024);
-      else setRowsWidth(1200);
+      console.log("use state rows width: " + rowsWidth);
+      setRowsWidth(innerWidth);
     };
-
     handleRowsWidth();
 
     window.addEventListener("resize", handleRowsWidth);
-  });
+    return () => window.removeEventListener("resize", handleRowsWidth);
+  }, []);
 
   const rows = useMemo(() => {
     const result = [];
     console.log("result: ");
-    console.log(result);
+    // console.log(result);
 
-    const maxWidth = 700;
+    const maxWidth = rowsWidth;
     let rowWidth = 0;
 
     //  initialize first empty row
@@ -88,7 +46,7 @@ export default function PhotoGrid({ categoryName }) {
 
     // iterate each photo of the specified category
     PHOTOS[categoryName].map((element) => {
-      console.table(element);
+      // console.table(element);
 
       // update the row width with the new image
       rowWidth += element.orientation === "horizontal" ? 300 : 200;
@@ -107,14 +65,21 @@ export default function PhotoGrid({ categoryName }) {
     console.log(result);
 
     return result;
-  }, [categoryName, totalColumns, PHOTOS]);
+  }, [categoryName, PHOTOS, rowsWidth]);
 
   return (
     <div className={styles.photoGridRowsContainer}>
       {rows.map((row, index) => (
         <div key={index} className={styles.row}>
           {row.map((photo) => (
-            <div key={photo.id}>
+            <div
+              key={photo.id}
+              className={
+                photo.orientation === "horizontal"
+                  ? styles.verticalRatio
+                  : styles.horizontalRatio
+              }
+            >
               <ImageCard
                 title={photo.title}
                 src={photo.thumb}
@@ -122,8 +87,8 @@ export default function PhotoGrid({ categoryName }) {
                 alt={photo.title}
                 className={styles.imageGridRowsCustomStyle}
               ></ImageCard>
-              <p>text</p>
-              <p className={styles.title}>{photo.title}</p>
+              {/* <p>text</p> */}
+              {/* <p className={styles.title}>{photo.title}</p> */}
             </div>
           ))}
         </div>
