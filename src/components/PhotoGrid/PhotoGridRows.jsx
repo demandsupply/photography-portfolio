@@ -75,9 +75,11 @@ export default function PhotoGridRows({ categoryName }) {
             <div
               key={photo.id}
               className={
-                photo.orientation === "horizontal"
-                  ? styles.verticalRatio
-                  : styles.horizontalRatio
+                row.length === 1
+                  ? styles.normalRatio
+                  : photo.orientation === "horizontal"
+                    ? styles.verticalRatio
+                    : styles.horizontalRatio
               }
             >
               <ImageCard

@@ -53,10 +53,13 @@
     height: 100%;
 }
 
+
+.normalRatio {
+    flex-grow: 1;
+}
 .verticalRatio {
     flex-grow: 1.5;
 }
-
 .horizontalRatio {
     flex-grow: 0.666667;
 }
