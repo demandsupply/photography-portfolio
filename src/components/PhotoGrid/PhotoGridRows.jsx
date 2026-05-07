@@ -6,19 +6,6 @@ import JSONPhotos from "@/data/photos.json";
 
 export default function PhotoGridRows({ categoryName }) {
   const PHOTOS = JSONPhotos;
-
-  // VISUALIZZAZIONE PER RIGHE (altezza righe variabile in base al numero di foto per riga)
-  //  ph < 480 = H | V + H | V + V OPPURE H | V
-  //  480 < ph < 768 = H + H || H + V || H + V + V
-  // 768 < ph < 1024 = H + H + H || H + H + V + V|| H + H + V ... ?
-  // 1024 > ph =
-
-  // OPPURE
-  // per ogni riga stabilisco una lugnhezza massima (in base alla lunghezza dello schermo)
-  // ho un array di foto, calcolo la lugnhezza totale delle foto consecutive, se la lugnhezza è
-  //  maggiore della riga toglo l'ultima immagine dalla riga, genero la riga successiva e aggiungo l'immagine
-  // ripeti il pattern fino a esaurimento immagini -> cosi ho il n totale di righe e posso generare tutto
-
   const [rowsWidth, setRowsWidth] = useState(700);
 
   useEffect(() => {
@@ -88,7 +75,12 @@ export default function PhotoGridRows({ categoryName }) {
                 orientation={photo.orientation}
                 alt={photo.title}
                 className={styles.imageGridRowsCustomStyle}
-              ></ImageCard>
+                variant="bottom"
+              >
+                <div className={styles.customBottomOverlay}>
+                  <h3 className={styles.photoTitle}>{photo.title}</h3>
+                </div>
+              </ImageCard>
               {/* <p>text</p> */}
               {/* <p className={styles.title}>{photo.title}</p> */}
             </div>

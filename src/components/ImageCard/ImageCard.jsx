@@ -8,6 +8,7 @@ export default function ImageCard({
   orientation,
   className = "",
   children,
+  variant = "default",
 }) {
   const cardClassName = `${styles.cardContainer} ${styles[orientation]} ${className}`;
 
@@ -16,7 +17,16 @@ export default function ImageCard({
       <div className={styles.imageWrapper}>
         <Image src={src} alt={alt} fill className={styles.image} />
       </div>
-      {children && <div className={styles.overlay}>{children}</div>}
+
+      {variant !== "none" && (
+        <div
+          className={
+            variant === "bottom" ? styles.customBottomOverlay : styles.overlay
+          }
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 }
