@@ -3,10 +3,20 @@ import { useState, useEffect, useMemo } from "react";
 import ImageCard from "../ImageCard/ImageCard";
 import styles from "./PhotoGrid.module.css";
 import JSONPhotos from "@/data/photos.json";
+import LightBox from "../LightBox/LightBox";
 
 export default function PhotoGridRows({ categoryName }) {
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+  const openLightbox = (index) => setCurrentIndex(index);
+  const closeLightbox = () => setCurrentIndex(null);
+
   const PHOTOS = JSONPhotos;
+  const CATEGORY_PHOTOS = PHOTOS[categoryName];
   const [rowsWidth, setRowsWidth] = useState(700);
+
+  console.log("CATEGORY_PHOTOS: ");
+  console.log(CATEGORY_PHOTOS);
 
   useEffect(() => {
     const handleRowsWidth = () => {
@@ -32,7 +42,7 @@ export default function PhotoGridRows({ categoryName }) {
     result.push(row);
 
     // iterate each photo of the specified category
-    PHOTOS[categoryName].map((element) => {
+    CATEGORY_PHOTOS.map((element) => {
       // console.table(element);
 
       // update the row width with the new image
@@ -52,41 +62,56 @@ export default function PhotoGridRows({ categoryName }) {
     console.log(result);
 
     return result;
-  }, [categoryName, PHOTOS, rowsWidth]);
+  }, [categoryName, CATEGORY_PHOTOS, rowsWidth]);
 
   return (
     <div className={styles.photoGridRowsContainer}>
-      {rows.map((row, index) => (
-        <div key={index} className={styles.row}>
-          {row.map((photo) => (
-            <div
-              key={photo.id}
-              className={
-                row.length === 1
-                  ? styles.normalRatio
-                  : photo.orientation === "horizontal"
-                    ? styles.verticalRatio
-                    : styles.horizontalRatio
-              }
-            >
-              <ImageCard
-                title={photo.title}
-                src={photo.thumb}
-                orientation={photo.orientation}
-                alt={photo.title}
-                className={styles.imageGridRowsCustomStyle}
-                variant="bottom"
+      {rows.map((row, rowIndex) => (
+        <div key={rowIndex} className={styles.row}>
+          {row.map((photo) => {
+            const photoIndex = CATEGORY_PHOTOS.indexOf(photo);
+            console.log("photo: ", photo.id);
+            console.log("photo thumb: ", photo.thumb);
+            console.log("photoIndex: ", photoIndex);
+
+            return (
+              <div
+                onClick={() => openLightbox(photoIndex)}
+                key={photo.id}
+                className={
+                  row.length === 1
+                    ? styles.normalRatio
+                    : photo.orientation === "horizontal"
+                      ? styles.verticalRatio
+                      : styles.horizontalRatio
+                }
               >
-                <div className={styles.customBottomOverlay}>
-                  <h3 className={styles.photoTitle}>{photo.title}</h3>
-                </div>
-              </ImageCard>
-              {/* <p>text</p> */}
-              {/* <p className={styles.title}>{photo.title}</p> */}
-            </div>
-          ))}
+                <ImageCard
+                  title={photo.title}
+                  src={photo.thumb}
+                  orientation={photo.orientation}
+                  alt={photo.title}
+                  className={styles.imageGridRowsCustomStyle}
+                  variant="bottom"
+                >
+                  <div className={styles.customBottomOverlay}>
+                    <h3 className={styles.photoTitle}>{photo.title}</h3>
+                  </div>
+                </ImageCard>
+                {/* <p>text</p> */}
+                {/* <p className={styles.title}>{photo.title}</p> */}
+              </div>
+            );
+          })}
         </div>
       ))}
+      {currentIndex !== null && (
+        <LightBox
+          photos={CATEGORY_PHOTOS}
+          currentIndex={currentIndex}
+          onClose={closeLightbox}
+        />
+      )}
     </div>
   );
 }
