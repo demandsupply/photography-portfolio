@@ -11,6 +11,11 @@ export default function PhotoGridRows({ categoryName }) {
   const openLightbox = (index) => setCurrentIndex(index);
   const closeLightbox = () => setCurrentIndex(null);
 
+  const showNext = () =>
+    setCurrentIndex((prev) => (prev + 1) % PHOTOS[categoryName].length);
+  const showPrev = () =>
+    setCurrentIndex((prev) => (prev - 1) % PHOTOS[categoryName].length);
+
   const PHOTOS = JSONPhotos;
   const CATEGORY_PHOTOS = PHOTOS[categoryName];
   const [rowsWidth, setRowsWidth] = useState(700);
@@ -110,6 +115,8 @@ export default function PhotoGridRows({ categoryName }) {
           photos={CATEGORY_PHOTOS}
           currentIndex={currentIndex}
           onClose={closeLightbox}
+          onNext={showNext}
+          onPrev={showPrev}
         />
       )}
     </div>
