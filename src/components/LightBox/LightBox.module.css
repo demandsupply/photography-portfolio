@@ -1,11 +1,11 @@
 .lightboxOverlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(10, 10, 10, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999;
   cursor: zoom-out;
 }
 
@@ -14,10 +14,20 @@
   width: 90%;
   height: 80%;
   cursor: default;
+  /* border: 3px solid #a13030; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .photoFull {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  /* margin: auto; */
   object-fit: contain;
+  height: auto;
 }
 
 .navBtn, .closeBtn {
@@ -27,7 +37,7 @@
   color: white;
   font-size: 3rem;
   cursor: pointer;
-  z-index: 1010;
+  z-index: 1000;
   transition: opacity 0.3s;
 }
 
@@ -42,7 +52,7 @@
 
 .caption {
   position: absolute;
-  bottom: -40px;
+  bottom: -30px;
   width: 100%;
   text-align: center;
   color: white;

@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import Image from "next/image";
 import styles from "./LightBox.module.css";
 
 export default function Lightbox({
@@ -20,12 +19,13 @@ export default function Lightbox({
       </button>
 
       <div className={styles.photoContainer}>
-        <Image
+        <img
           src={currentPhoto.fullRes}
           alt={currentPhoto.title}
-          fill
+          loading="lazy"
           className={styles.photoFull}
         />
+        <p className={styles.caption}>{currentPhoto.title}</p>
       </div>
 
       <button
