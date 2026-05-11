@@ -14,7 +14,10 @@ export default function PhotoGridRows({ categoryName }) {
   const showNext = () =>
     setCurrentIndex((prev) => (prev + 1) % PHOTOS[categoryName].length);
   const showPrev = () =>
-    setCurrentIndex((prev) => (prev - 1) % PHOTOS[categoryName].length);
+    setCurrentIndex(
+      (prev) =>
+        (prev - 1 + PHOTOS[categoryName].length) % PHOTOS[categoryName].length,
+    );
 
   const PHOTOS = JSONPhotos;
   const CATEGORY_PHOTOS = PHOTOS[categoryName];
