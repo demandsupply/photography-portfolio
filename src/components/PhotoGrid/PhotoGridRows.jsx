@@ -39,15 +39,12 @@ export default function PhotoGridRows({ categoryName }) {
 
   const rows = useMemo(() => {
     const result = [];
-    console.log("result: ");
-    // console.log(result);
 
     const maxWidth = rowsWidth;
-    let rowWidth = 0;
 
     //  initialize first empty row
-    const row = [];
-    result.push(row);
+    let row = [];
+    let rowWidth = 0;
 
     // iterate each photo of the specified category
     CATEGORY_PHOTOS.map((element) => {
@@ -57,20 +54,23 @@ export default function PhotoGridRows({ categoryName }) {
       rowWidth += element.orientation === "horizontal" ? 300 : 200;
 
       if (rowWidth >= maxWidth) {
-        const row = [];
-        row.push(element);
         result.push(row);
+        row = [element];
         rowWidth = element.orientation === "horizontal" ? 300 : 200;
         return;
       } else {
-        result[result.length - 1].push(element);
+        row.push(element);
       }
     });
+
+    if (row.length > 0) {
+      result.push(row);
+    }
     console.log("result: ");
     console.log(result);
 
     return result;
-  }, [categoryName, CATEGORY_PHOTOS, rowsWidth]);
+  }, [CATEGORY_PHOTOS, rowsWidth]);
 
   return (
     <div className={styles.photoGridRowsContainer}>
@@ -81,17 +81,23 @@ export default function PhotoGridRows({ categoryName }) {
             console.log("photo: ", photo.id);
             console.log("photo thumb: ", photo.thumb);
             console.log("photoIndex: ", photoIndex);
+            console.log("rowIndex: ", rowIndex);
+            console.log("rows.length: ", rows.length - 1);
 
             return (
               <div
                 onClick={() => openLightbox(photoIndex)}
                 key={photo.id}
                 className={
-                  row.length === 1
-                    ? styles.normalRatio
-                    : photo.orientation === "horizontal"
-                      ? styles.verticalRatio
-                      : styles.horizontalRatio
+                  rows.length === rowIndex + 1 && row.length === 1
+                    ? photo.orientation === "horizontal"
+                      ? styles.lastSingleHorizontalImage
+                      : styles.lastSingleVerticalImage
+                    : row.length === 1
+                      ? styles.normalRatio
+                      : photo.orientation === "horizontal"
+                        ? styles.verticalRatio
+                        : styles.horizontalRatio
                 }
               >
                 <ImageCard

@@ -79,10 +79,10 @@
     },
     {
       "id": "p12",
-      "title": "Espressione Libera",
+      "title": "Espressione Libera 12",
       "fullRes": "/gallery/portraits/p12-full.jpg",
       "thumb": "/gallery/portraits/p12-thumb.jpg",
-      "orientation": "horizontal"
+      "orientation": "vertical"
     }
   ],
   "landscapes": [
