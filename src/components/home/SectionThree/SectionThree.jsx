@@ -5,8 +5,9 @@ export default function SectionThree({ title, subtitle }) {
   return (
     <section className={styles.sectionThree}>
       <h2 className={styles.title}>Selected Works</h2>
-      <div className={styles.imagesGrid}>
-        <div className={styles.column}>
+      {/* ROWS GRID */}
+      <div className={styles.imagesGridRows}>
+        <div className={styles.row}>
           <ImageCard
             src="/home/sample-img-horizontal.jpg"
             orientation="horizontal"
@@ -14,6 +15,30 @@ export default function SectionThree({ title, subtitle }) {
           <ImageCard
             src="/home/sample-img-vertical.jpg"
             orientation="vertical"
+          />
+          <ImageCard
+            src="/home/sample-img-horizontal.jpg"
+            orientation="horizontal"
+          />
+        </div>
+        <div className={styles.row}>
+          <ImageCard
+            src="/home/sample-img-vertical.jpg"
+            orientation="vertical"
+          />
+          <ImageCard
+            src="/home/sample-img-horizontal.jpg"
+            orientation="horizontal"
+          />
+          <ImageCard
+            src="/home/sample-img-horizontal.jpg"
+            orientation="horizontal"
+          />
+        </div>
+        <div className={styles.row}>
+          <ImageCard
+            src="/home/sample-img-horizontal.jpg"
+            orientation="horizontal"
           />
           <ImageCard
             src="/home/sample-img-horizontal.jpg"
@@ -24,7 +49,7 @@ export default function SectionThree({ title, subtitle }) {
             orientation="vertical"
           />
         </div>
-        <div className={styles.column}>
+        <div className={styles.row}>
           <ImageCard
             src="/home/sample-img-vertical.jpg"
             orientation="vertical"
@@ -34,33 +59,69 @@ export default function SectionThree({ title, subtitle }) {
             orientation="horizontal"
           />
           <ImageCard
-            src="/home/sample-img-vertical.jpg"
-            orientation="vertical"
-          />
-          <ImageCard
-            src="/home/sample-img-vertical.jpg"
-            orientation="vertical"
-          />
-        </div>
-        <div className={styles.column}>
-          <ImageCard
             src="/home/sample-img-horizontal.jpg"
             orientation="horizontal"
-          />
-          <ImageCard
-            src="/home/sample-img-vertical.jpg"
-            orientation="vertical"
-          />
-          <ImageCard
-            src="/home/sample-img-horizontal.jpg"
-            orientation="horizontal"
-          />
-          <ImageCard
-            src="/home/sample-img-vertical.jpg"
-            orientation="vertical"
           />
         </div>
       </div>
+
+      {/* COLUMNS GRID */}
+      {/* <div className={styles.imagesGridColumns}>
+        <div className={styles.column}>
+          <ImageCard
+            src="/home/sample-img-horizontal.jpg"
+            orientation="horizontal"
+          />
+          <ImageCard
+            src="/home/sample-img-vertical.jpg"
+            orientation="vertical"
+          />
+          <ImageCard
+            src="/home/sample-img-horizontal.jpg"
+            orientation="horizontal"
+          />
+          <ImageCard
+            src="/home/sample-img-vertical.jpg"
+            orientation="vertical"
+          />
+        </div>
+        <div className={styles.column}>
+          <ImageCard
+            src="/home/sample-img-vertical.jpg"
+            orientation="vertical"
+          />
+          <ImageCard
+            src="/home/sample-img-horizontal.jpg"
+            orientation="horizontal"
+          />
+          <ImageCard
+            src="/home/sample-img-vertical.jpg"
+            orientation="vertical"
+          />
+          <ImageCard
+            src="/home/sample-img-vertical.jpg"
+            orientation="vertical"
+          />
+        </div>
+        <div className={styles.column}>
+          <ImageCard
+            src="/home/sample-img-horizontal.jpg"
+            orientation="horizontal"
+          />
+          <ImageCard
+            src="/home/sample-img-vertical.jpg"
+            orientation="vertical"
+          />
+          <ImageCard
+            src="/home/sample-img-horizontal.jpg"
+            orientation="horizontal"
+          />
+          <ImageCard
+            src="/home/sample-img-vertical.jpg"
+            orientation="vertical"
+          />
+        </div>
+      </div> */}
     </section>
   );
 }
