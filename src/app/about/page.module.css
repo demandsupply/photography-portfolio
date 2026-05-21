@@ -1,0 +1,39 @@
+.container {
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	gap: var(--spacing-xxl);
+	padding: var(--spacing-xl);
+}
+
+.leftBox {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	gap: var(--spacing-lg);
+	flex: 1;
+}
+
+
+.title {
+	margin-top: var(--spacing-md);
+	font-size: var(--text-h1);
+	font-weight: 700;
+	text-align: center;
+}
+
+.bio {
+	margin: var(--spacing-md) 0;
+	line-height: 1.6;
+	text-align: center;
+}
+
+.customImgCard {
+	width: 350px;
+	border-radius: 0;
+}
+
+.customImgCard:hover {
+  cursor: default;
+}
