@@ -1,26 +1,30 @@
 import styles from "./Navbar.module.css";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <nav className={styles.nav}>
       <ul className={styles.left}>
         <li>
-          <a href="./">Home</a>
+          <Link href={"/"}>Home</Link>
         </li>
       </ul>
 
       <ul className={styles.right}>
         <li>
-          <a href="./portfolio">Portfolio</a>
+          <Link href={"/portfolio"}>Portfolio</Link>
         </li>
         <li>
-          <a href="./about">About</a>
+          <Link href={"/about"}>About</Link>
+          {/* <a href="/about">About</a> */}
         </li>
         <li>
-          <a href="#">Link...</a>
+          <Link href={"/#"}>Link...</Link>
+          {/* <a href="#">Link...</a> */}
         </li>
         <li>
-          <a href="./contacts">Contacts</a>
+          <Link href={"/contacts"}>Contacts</Link>
+          {/* <a href="/contacts">Contacts</a> */}
         </li>
       </ul>
     </nav>
