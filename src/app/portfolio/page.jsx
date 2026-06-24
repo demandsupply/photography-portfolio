@@ -1,5 +1,5 @@
 import { SiSystem76 } from "react-icons/si";
-import styles from "./portfolio.module.css";
+import styles from "./page.module.css";
 import { CATEGORIES } from "@/data/categories";
 import ImageCard from "@/components/ImageCard/ImageCard";
 import Link from "next/link";
