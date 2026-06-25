@@ -1,0 +1,78 @@
+.main {
+	max-width: 1000px;
+	margin: auto;
+
+}
+
+.title {
+    margin: var(--spacing-lg) auto;
+    width: fit-content;
+    font-size: var(--text-h1);
+    letter-spacing: 0.1em;
+}
+
+.hero {
+    position: relative;
+    width: 90%;
+    height: 600px;
+    margin: var(--spacing-xl) auto;
+    /* border: 2px solid #c01212; */
+
+    background-image: url("/home/sample-img-horizontal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.imgCard {
+    position: absolute;
+    inset: 0;
+}
+
+.imgTitle {
+    padding: 12px var(--spacing-lg);
+    position: absolute;
+    top: 20px;
+    transform: translateX(-50%);
+    left: 50%;
+    color: white;
+
+    text-align: center;
+    font-size: 2rem;
+    z-index: 2;
+    /* border: 2px solid #c01212; */
+
+    background-color: rgba(38, 40, 42, 0.3);
+
+}
+
+.contactsBox {
+    padding: 0 var(--spacing-sm);
+    position: absolute;
+    bottom: 20px;
+    transform: translateX(-50%);
+    left: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid #c01212; */
+    background-color: rgba(38, 40, 42, 0.3);
+
+}
+
+.contactsBox p {
+    white-space: nowrap;
+    color: white;
+    border-right: 2px solid #eee;
+    padding: 1px var(--spacing-md);
+}
+
+.socialsContainer {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+}
+.socialsContainer a {
+    color: white;
+}
