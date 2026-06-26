@@ -4,16 +4,19 @@
   --background: var(--white);
   --foreground: var(--almost-black);
 
-  /* color palette */
+
+  /* COLOR PALETTE */
   --white: #ffffff;
   --dirty-white: #F0F5F9;
   --light-grey: #C9D6DF;
   --dark-grey: #52616B;
   --almost-black: #1E2022;
 
-  /* buttons */
+
+  /* BUTTONS */
   --primary-color: var(--dirty-white);
   --secondary-color: #1b1b1d;
+
 
   /* SPACING */
   --spacing-xs: 4px;
@@ -23,9 +26,11 @@
   --spacing-xl: 64px;
   --spacing-xxl: 96px;
 
+
   /* FONT FAMILY */
   --font-primary: 'fing', sans-serif;
   --font-secondary: 'fings', serif;
+
 
   /* FONT SIZE */
   --text-sx: 12px;
@@ -39,11 +44,13 @@
   --text-h3: 28px;
   --text-h4: 22px;
 
+  
   /* BORDER RADIUS */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
 
+  
   /* OTHER COSTANTS */
   --navbar-height: 60px;
   --section-max-width: 1200px;

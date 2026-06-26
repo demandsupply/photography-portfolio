@@ -1,6 +1,6 @@
 .page {
   --background: #fafafa;
-  --foreground: #fff;
+  --foreground: var(--white);
 
   --text-primary: #000;
   --text-secondary: #666;
@@ -66,8 +66,8 @@
   flex-direction: row;
   width: 100%;
   max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+  gap: var(--spacing-md);
+  font-size: var(--text-sm);
 }
 
 .ctas a {
@@ -75,7 +75,7 @@
   justify-content: center;
   align-items: center;
   height: 40px;
-  padding: 0 16px;
+  padding: 0 var(--spacing-md);
   border-radius: 128px;
   border: 1px solid transparent;
   transition: 0.2s;
@@ -87,7 +87,7 @@
 a.primary {
   background: var(--text-primary);
   color: var(--background);
-  gap: 8px;
+  gap: var(--spacing-sm);
 }
 
 a.secondary {
@@ -113,7 +113,7 @@ a.secondary {
   }
 
   .intro {
-    gap: 16px;
+    gap: var(--spacing-md);
   }
 
   .intro h1 {

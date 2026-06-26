@@ -17,7 +17,7 @@
 }
 
 .nav a {
-    padding: 16px;
+    padding: var(--spacing-md);
     font-size: var(--text-xl);
     font-weight: 600;
 }
