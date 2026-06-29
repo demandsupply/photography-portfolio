@@ -6,6 +6,12 @@ body {
   overflow-x: hidden;
 }
 
+h1, h2, h4, h5, h6,
+.headingFont {
+  font-family: var(--font-heading);
+  letter-spacing: 0.25em;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
