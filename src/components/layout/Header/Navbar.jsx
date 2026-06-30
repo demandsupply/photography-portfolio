@@ -3,19 +3,38 @@
 import styles from "./Navbar.module.css";
 import Link from "next/link";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const navRef = useRef(null)
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+
+  useEffect(() => {
+    const handleClickOutsideDropdown = (event) => {
+      if (isOpen && !navRef.current.contains(event.target)) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener("click", handleClickOutsideDropdown)
+    document.addEventListener("touch", handleClickOutsideDropdown)
+
+    return () => {
+      document.removeEventListener("click", handleClickOutsideDropdown)
+      document.removeEventListener("touch", handleClickOutsideDropdown)
+    }
+  }, [isOpen])
+
   return (
-    <nav className={styles.nav}>
+    <nav ref={navRef} className={styles.nav}>
       <ul className={styles.left}>
         <li className="headingFont">
           <Link href={"/"}>Home</Link>

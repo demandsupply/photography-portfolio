@@ -16,3 +16,10 @@
     position: relative;
     background-color: var(--almost-black); 
 }
+
+/* MEDIA QUERIES */
+@media (width < 768px) {
+    .headerHome {
+        background-color: var(--almost-black);
+    }
+}
