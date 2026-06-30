@@ -1,0 +1,6 @@
+.title {
+    margin: var(--spacing-lg) auto;
+    width: fit-content;
+    font-size: var(--text-h1);
+    letter-spacing: 0.1em;
+}

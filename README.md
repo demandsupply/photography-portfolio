@@ -6,7 +6,7 @@ Sito web progettato su misura che mostra il portfolio fotografico di un amico.
 
 - Design personalizzato
 - Velocità
-- Responsiveness
+- Responsiveness (breakpoint scelti: 480px | 768px | 1024px | 1440px)
 
 # Tech stack:
 
