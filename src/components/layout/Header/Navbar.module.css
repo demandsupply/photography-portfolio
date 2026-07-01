@@ -42,6 +42,10 @@
     padding: var(--spacing-md);
 }
 
+.iconCustom:hover {
+    cursor: pointer;
+}
+
 /* MEDIA QUERIES */
 @media (width < 768px) {
     .hamburgerMenu {
@@ -62,7 +66,7 @@
         overflow: 0;
         opacity: 0;
 
-    background-color: var(--almost-black);
+        background-color: var(--almost-black);
 
     }
 

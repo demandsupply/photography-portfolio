@@ -4,26 +4,36 @@ import styles from "./Navbar.module.css";
 import Link from "next/link";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const currentPath = usePathname();
+
+  const [prevPath, setPrevPath] = useState(currentPath)
+  if (currentPath !== prevPath) {
+    setPrevPath(currentPath);
+    setIsOpen(false);
+  }
 
   const navRef = useRef(null)
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-
   useEffect(() => {
+    // const handleDropdownOnload = () => {setIsOpen(false)}
     const handleClickOutsideDropdown = (event) => {
       if (isOpen && !navRef.current.contains(event.target)) {
         setIsOpen(false)
       }
     }
 
+    // document.addEventListener("DOMContentLoad", handleDropdownOnload)
     document.addEventListener("click", handleClickOutsideDropdown)
     document.addEventListener("touch", handleClickOutsideDropdown)
 
