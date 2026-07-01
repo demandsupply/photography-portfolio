@@ -44,6 +44,25 @@ export default function Footer() {
 				</nav>
 				
 			</div>
+			<div className={styles.footerMobile}>
+				<h3>SCPhotos</h3>
+				<p>..Frase ad effetto..</p>
+
+				<div className={styles.socialsContainer}>
+					<a href="#"><FaInstagram size={24}/></a>
+					<a href="#"><FiFacebook size={24}/></a>
+				</div>
+
+				<div className={styles.contactsContainer}>
+					<p>Email: <span>scphotos@gmail.com</span></p>
+					<p>Phone: <span>+39 320 567 9838</span></p>
+				</div>
+
+				<div className={styles.policiesContainer}>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Cookie Policy</a></li>
+				</div>
+			</div>
 			<div className={styles.footerBottom}>
 				<p><small>© 2026. Stefano Scalon - Tutti i diritti sono riservati.</small></p>
 			</div>
