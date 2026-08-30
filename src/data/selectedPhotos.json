@@ -1,0 +1,88 @@
+
+[
+  {
+    "id": "p01",
+    "title": "Luce d'Inverno",
+    "fullRes": "/gallery/portraits/p01-full.jpg",
+    "thumb": "/gallery/portraits/p01-thumb.jpg",
+    "orientation": "vertical"
+  },
+  {
+    "id": "p02",
+    "title": "Sguardo Profondo",
+    "fullRes": "/gallery/portraits/p02-full.jpg",
+    "thumb": "/gallery/portraits/p02-thumb.jpg",
+    "orientation": "vertical"
+  },
+  {
+    "id": "p03",
+    "title": "Profilo Urbano",
+    "fullRes": "/gallery/portraits/p03-full.jpg",
+    "thumb": "/gallery/portraits/p03-thumb.jpg",
+    "orientation": "horizontal"
+  },
+  {
+    "id": "p04",
+    "title": "Eleganza in Bianco",
+    "fullRes": "/gallery/portraits/p04-full.jpg",
+    "thumb": "/gallery/portraits/p04-thumb.jpg",
+    "orientation": "vertical"
+  },
+  {
+    "id": "p05",
+    "title": "Riflessi d'Anima",
+    "fullRes": "/gallery/portraits/p05-full.jpg",
+    "thumb": "/gallery/portraits/p05-thumb.jpg",
+    "orientation": "vertical"
+  },
+  {
+    "id": "p06",
+    "title": "Espressione Libera",
+    "fullRes": "/gallery/portraits/p06-full.jpg",
+    "thumb": "/gallery/portraits/p06-thumb.jpg",
+    "orientation": "horizontal"
+  },
+  {
+    "id": "p07",
+    "title": "Espressione Libera",
+    "fullRes": "/gallery/portraits/p07-full.jpg",
+    "thumb": "/gallery/portraits/p07-thumb.jpg",
+    "orientation": "vertical"
+  },
+  {
+    "id": "p08",
+    "title": "Espressione Libera",
+    "fullRes": "/gallery/portraits/p08-full.jpg",
+    "thumb": "/gallery/portraits/p08-thumb.jpg",
+    "orientation": "vertical"
+  },
+  {
+    "id": "p09",
+    "title": "Espressione Libera",
+    "fullRes": "/gallery/portraits/p09-full.jpg",
+    "thumb": "/gallery/portraits/p09-thumb.jpg",
+    "orientation": "vertical"
+  },
+  {
+    "id": "p10",
+    "title": "Espressione Libera",
+    "fullRes": "/gallery/portraits/p10-full.jpg",
+    "thumb": "/gallery/portraits/p10-thumb.jpg",
+    "orientation": "vertical"
+  },
+  {
+    "id": "p11",
+    "title": "Espressione Libera",
+    "fullRes": "/gallery/portraits/p11-full.jpg",
+    "thumb": "/gallery/portraits/p11-thumb.jpg",
+    "orientation": "horizontal"
+  },
+  {
+    "id": "p12",
+    "title": "Espressione Libera 12",
+    "fullRes": "/gallery/portraits/p12-full.jpg",
+    "thumb": "/gallery/portraits/p12-thumb.jpg",
+    "orientation": "vertical"
+  }
+]
+

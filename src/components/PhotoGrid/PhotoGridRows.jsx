@@ -5,7 +5,7 @@ import styles from "./PhotoGrid.module.css";
 import JSONPhotos from "@/data/photos.json";
 import LightBox from "../LightBox/LightBox";
 
-export default function PhotoGridRows({ categoryName }) {
+export default function PhotoGridRows({ categoryName, photos }) {
   const [currentIndex, setCurrentIndex] = useState(null);
 
   const openLightbox = (index) => setCurrentIndex(index);
@@ -20,7 +20,7 @@ export default function PhotoGridRows({ categoryName }) {
     );
 
   const PHOTOS = JSONPhotos;
-  const CATEGORY_PHOTOS = PHOTOS[categoryName];
+  const CATEGORY_PHOTOS = photos ?? PHOTOS[categoryName];
   const [rowsWidth, setRowsWidth] = useState(700);
 
   console.log("CATEGORY_PHOTOS: ");
