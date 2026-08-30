@@ -26,10 +26,17 @@ export default function PhotoGridRows({ categoryName, photos }) {
   console.log("CATEGORY_PHOTOS: ");
   console.log(CATEGORY_PHOTOS);
 
+  const millisecondsToDebounce = 100;
+
   useEffect(() => {
+    let debounceTimer;
+
     const handleRowsWidth = () => {
-      console.log("use state rows width: " + rowsWidth);
-      setRowsWidth(innerWidth);
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        setRowsWidth(innerWidth);
+        console.log("use state rows width: " + rowsWidth);
+      }, millisecondsToDebounce);
     };
     handleRowsWidth();
 
