@@ -13,16 +13,17 @@
 
 .title {
     margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
     font-size: var(--text-h2);
 }
 
 
-.imagesGridColumns {
-  display: flex;
-  gap: var(--spacing-lg); 
+.imagesGrid {
+  /* display: flex; */
+  /* gap: var(--spacing-lg); */ 
   margin-top: var(--spacing-lg);
   width: 100%;
-  padding: var(--spacing-xl)
+  padding: var(--spacing-lg)
 }
 
 .column {
@@ -53,4 +54,14 @@
   height: 100%;
   width: auto;
   /* object-fit: cover;  */
+}
+
+
+
+/* MEDIA QUERIES */
+@media ( width > 1080px) {
+    .categoriesContainer {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
 }
