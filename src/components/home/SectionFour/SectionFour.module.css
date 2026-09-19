@@ -18,6 +18,7 @@
 
 .subtitle {
     font-size: 24px;
+    text-align: center;
     margin: var(--spacing-lg) auto;
     white-space: pre-wrap;
 }
@@ -25,14 +26,36 @@
 .categoriesContainer {
     width: 80%;
     margin: var(--spacing-xl) auto;
-
+    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-xl);
+    gap: 8%;
 }
 
 .categoryCard {
     width: 100%;
+    min-width: 250px;
     border-radius: var(--radius-md);
     transition: .3s;
+}
+
+
+
+
+/* MEDIA QUERIES */
+@media (480px <= width < 768px) {
+    .categoriesContainer {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
+
+
+
+@media (width < 480px) {
+    .categoriesContainer {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
 }
