@@ -26,7 +26,8 @@
 }
 
 .customImgCard {
-	width: 400px;
+	width: 80%;
+	max-width: 360px;
 	border-radius: 0;
 }
 
@@ -41,4 +42,28 @@
 	margin: var(--spacing-md) 0;
 	line-height: 1.6;
 	text-align: center;
+}
+
+/*  MEDIA QUERIES */
+
+@media (max-width: 768px) {
+
+    .aboutContainer {
+        flex-direction: column;
+        grid-template-columns: repeat(3, 3fr);
+        gap: var(--spacing-md);
+    }
+
+	.customImgCard {
+		margin: auto;
+	}
+}
+
+@media (max-width: 480px) {
+
+    .aboutText {
+        max-height: 180px;
+        overflow: hidden;
+        mask-image: linear-gradient(to bottom, black 45%, transparent 100%);
+    }
 }
