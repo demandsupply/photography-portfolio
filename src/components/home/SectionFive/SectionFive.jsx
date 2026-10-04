@@ -10,6 +10,7 @@ export default function SectionFive() {
           src="/home/sample-img-vertical.jpg"
           orientation="vertical"
           className={styles.customImgCard}
+          variant="none"
         />
         <div className={styles.container}>
           <h2 className={styles.title}>About Me</h2>
