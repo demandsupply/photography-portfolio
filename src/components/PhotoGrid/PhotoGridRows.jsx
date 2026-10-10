@@ -6,27 +6,16 @@ import JSONPhotos from "@/data/photos.json";
 import LightBox from "../LightBox/LightBox";
 
 export default function PhotoGridRows({ categoryName, photos, className = "" }) {
-  const [currentIndex, setCurrentIndex] = useState(null);
-
-  const openLightbox = (index) => setCurrentIndex(index);
-  const closeLightbox = () => setCurrentIndex(null);
-
-  const showNext = () =>
-    setCurrentIndex((prev) => (prev + 1) % PHOTOS[categoryName].length);
-  const showPrev = () =>
-    setCurrentIndex(
-      (prev) =>
-        (prev - 1 + PHOTOS[categoryName].length) % PHOTOS[categoryName].length,
-    );
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null);
+  const [rowsWidth, setRowsWidth] = useState(700);
 
   const PHOTOS = JSONPhotos;
   const CATEGORY_PHOTOS = photos ?? PHOTOS[categoryName];
-  const [rowsWidth, setRowsWidth] = useState(700);
+  const millisecondsToDebounce = 100;
 
   console.log("CATEGORY_PHOTOS: ");
   console.log(CATEGORY_PHOTOS);
 
-  const millisecondsToDebounce = 100;
 
   useEffect(() => {
     let debounceTimer;
@@ -44,6 +33,7 @@ export default function PhotoGridRows({ categoryName, photos, className = "" }) 
     return () => window.removeEventListener("resize", handleRowsWidth);
   }, []);
 
+  
   const rows = useMemo(() => {
     const result = [];
 
@@ -93,7 +83,7 @@ export default function PhotoGridRows({ categoryName, photos, className = "" }) 
 
             return (
               <div
-                onClick={() => openLightbox(photoIndex)}
+                onClick={() => setCurrentPhotoIndex(photoIndex)}
                 key={photo.id}
                 className={
                   rows.length === rowIndex + 1 && row.length === 1
@@ -126,13 +116,11 @@ export default function PhotoGridRows({ categoryName, photos, className = "" }) 
           })}
         </div>
       ))}
-      {currentIndex !== null && (
+      {currentPhotoIndex !== null && (
         <LightBox
           photos={CATEGORY_PHOTOS}
-          currentIndex={currentIndex}
-          onClose={closeLightbox}
-          onNext={showNext}
-          onPrev={showPrev}
+          currentIndex={currentPhotoIndex}
+          onClose={() => setCurrentPhotoIndex(null)}
         />
       )}
     </div>

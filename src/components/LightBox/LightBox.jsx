@@ -1,14 +1,23 @@
 "use client";
-import { useEffect } from "react";
+import { useState } from "react";
 import styles from "./LightBox.module.css";
 
 export default function Lightbox({
   photos,
-  currentIndex,
+  initialIndex = 0,
   onClose,
-  onPrev,
-  onNext,
 }) {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+
+  // const openLightbox = (index) => setCurrentIndex(index);
+  // const closeLightbox = () => setCurrentIndex(null);
+
+  const showNext = () =>
+    setCurrentIndex((prev) => (prev + 1) % photos.length);
+  const showPrev = () =>
+    setCurrentIndex(
+      (prev) => (prev - 1 + photos.length) % photos.length);
+
   const currentPhoto = photos[currentIndex];
   console.log("currentPhoto: ", currentPhoto.fullRes);
 
@@ -32,7 +41,7 @@ export default function Lightbox({
         className={styles.navBtn}
         onClick={(e) => {
           e.stopPropagation();
-          onPrev();
+          showPrev();
         }}
         style={{ left: 30 }}
       >
@@ -43,7 +52,7 @@ export default function Lightbox({
         className={styles.navBtn}
         onClick={(e) => {
           e.stopPropagation();
-          onNext();
+          showNext();
         }}
         style={{ right: 30 }}
       >

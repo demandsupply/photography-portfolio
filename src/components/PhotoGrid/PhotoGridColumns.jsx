@@ -3,6 +3,7 @@ import { useState, useEffect, useMemo } from "react";
 import ImageCard from "../ImageCard/ImageCard";
 import styles from "./PhotoGrid.module.css";
 import JSONPhotos from "@/data/photos.json";
+import Lightbox from "../LightBox/LightBox";
 
 const DEFAULT_BREAKPOINTS = {
   480: 1,
@@ -12,6 +13,7 @@ const DEFAULT_BREAKPOINTS = {
 }
 
 export default function PhotoGridColumns({ categoryName, photos, breakpoints, className="" }) {
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null)
   const PHOTOS = JSONPhotos;
 
   // fetch photos from an array of pictures OR from JSON["categoryName"]
@@ -84,7 +86,13 @@ export default function PhotoGridColumns({ categoryName, photos, breakpoints, cl
       {columns.map((column, index) => (
         <div key={index} className={styles.column}>
           {column.map((photo) => (
-            <div key={photo.id}>
+            <div
+              onClick={() => {
+                const indexFound = photosToShow.findIndex((pts) => pts.id === photo.id)
+                setCurrentPhotoIndex(indexFound)
+              }} 
+              key={photo.id}
+            >
               <ImageCard
                 title={photo.title}
                 src={photo.thumb}
@@ -98,6 +106,13 @@ export default function PhotoGridColumns({ categoryName, photos, breakpoints, cl
           ))}
         </div>
       ))}
+      {currentPhotoIndex !== null && (
+        <Lightbox
+          photos={photosToShow}
+          currentIndex={currentPhotoIndex}
+          onClose={() => setCurrentPhotoIndex(null)}
+        />
+      )}
     </div>
   );
 }
