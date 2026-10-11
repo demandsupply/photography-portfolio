@@ -16,6 +16,7 @@
   /* border: 3px solid #a13030; */
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -23,7 +24,7 @@
 .photoFull {
   display: block;
   width: 100%;
-  max-height: 100%;
+  max-height: 90%;
   /* margin: auto; */
   object-fit: contain;
   height: auto;
@@ -34,7 +35,7 @@
   background: none;
   border: none;
   color: white;
-  font-size: 3rem;
+  font-size: clamp(var(--text-h3), 3vw, var(--text-h2));
   cursor: pointer;
   z-index: 1000;
   transition: opacity 0.3s;
@@ -44,14 +45,19 @@
   opacity: 0.7;
 }
 
+.navBtn {
+  top: calc(50% - var(--spacing-md));
+  transform: translateY(-50%);
+}
+
 .closeBtn {
-  top: 20px;
+  top: 10px;
   right: 30px;
 }
 
 .caption {
-  position: absolute;
-  bottom: -30px;
+  /* position: absolute; */
+  margin-top: var(--spacing-md);
   width: 100%;
   text-align: center;
   color: white;

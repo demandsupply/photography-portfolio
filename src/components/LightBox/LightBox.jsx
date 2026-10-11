@@ -24,7 +24,7 @@ export default function Lightbox({
   return (
     <div className={styles.lightboxOverlay} onClick={onClose}>
       <button className={styles.closeBtn} onClick={onClose}>
-        close
+        &#10005;
       </button>
 
       <div className={styles.photoContainer}>
