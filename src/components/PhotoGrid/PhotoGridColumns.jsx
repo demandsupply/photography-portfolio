@@ -109,7 +109,7 @@ export default function PhotoGridColumns({ categoryName, photos, breakpoints, cl
       {currentPhotoIndex !== null && (
         <Lightbox
           photos={photosToShow}
-          currentIndex={currentPhotoIndex}
+          index={currentPhotoIndex}
           onClose={() => setCurrentPhotoIndex(null)}
         />
       )}

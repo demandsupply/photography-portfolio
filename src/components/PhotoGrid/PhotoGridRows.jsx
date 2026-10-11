@@ -33,7 +33,7 @@ export default function PhotoGridRows({ categoryName, photos, className = "" }) 
     return () => window.removeEventListener("resize", handleRowsWidth);
   }, []);
 
-  
+
   const rows = useMemo(() => {
     const result = [];
 
@@ -119,7 +119,7 @@ export default function PhotoGridRows({ categoryName, photos, className = "" }) 
       {currentPhotoIndex !== null && (
         <LightBox
           photos={CATEGORY_PHOTOS}
-          currentIndex={currentPhotoIndex}
+          index={currentPhotoIndex}
           onClose={() => setCurrentPhotoIndex(null)}
         />
       )}

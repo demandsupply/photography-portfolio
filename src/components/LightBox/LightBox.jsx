@@ -4,10 +4,10 @@ import styles from "./LightBox.module.css";
 
 export default function Lightbox({
   photos,
-  initialIndex = 0,
+  index,
   onClose,
 }) {
-  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const [currentIndex, setCurrentIndex] = useState(index);
 
   // const openLightbox = (index) => setCurrentIndex(index);
   // const closeLightbox = () => setCurrentIndex(null);
