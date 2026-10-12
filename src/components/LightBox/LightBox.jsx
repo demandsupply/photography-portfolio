@@ -28,13 +28,15 @@ export default function Lightbox({
       </button>
 
       <div className={styles.photoContainer}>
-        <img
-          src={currentPhoto.fullRes}
-          alt={currentPhoto.title}
-          loading="lazy"
-          className={styles.photoFull}
-        />
-        <p className={styles.caption}>{currentPhoto.title}</p>
+        <div className={styles.imageWrapper}>
+          <img
+            src={currentPhoto.fullRes}
+            alt={currentPhoto.title}
+            loading="lazy"
+            className={`${styles.photoFull} ${styles[currentPhoto.orientation]}`}
+          />
+          <p className={styles.caption}>{currentPhoto.title}</p>
+        </div>
       </div>
 
       <button

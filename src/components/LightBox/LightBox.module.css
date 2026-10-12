@@ -10,25 +10,33 @@
 
 .photoContainer {
   position: relative;
-  width: 90%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   cursor: default;
   /* border: 3px solid #a13030; */
 
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper {
+  position: relative;
+  display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 }
 
 .photoFull {
   display: block;
-  width: 100%;
-  max-height: 90%;
-  /* margin: auto; */
-  object-fit: contain;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: auto;
   height: auto;
 }
+
 
 .navBtn, .closeBtn {
   position: absolute;
@@ -45,10 +53,10 @@
   opacity: 0.7;
 }
 
-.navBtn {
+/* .navBtn {
   top: calc(50% - var(--spacing-md));
   transform: translateY(-50%);
-}
+} */
 
 .closeBtn {
   top: 10px;
@@ -56,9 +64,15 @@
 }
 
 .caption {
-  /* position: absolute; */
+  position: absolute;
   margin-top: var(--spacing-md);
-  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  bottom: var(--spacing-sm);
+  width: fit-content;
+  font-size: clamp(var(--text-sm), 3vw, var(--text-lg));
+  max-width: 85%;
   text-align: center;
   color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
 }
