@@ -1,6 +1,7 @@
 import styles from "./SectionFive.module.css";
 import ImageCard from "@/components/ImageCard/ImageCard";
 import Button from "@/components/Button/Button";
+import Link from "next/link";
 
 export default function SectionFive() {
   return (
@@ -28,7 +29,9 @@ export default function SectionFive() {
               cillum dolore eu fugiat nulla pariatur.
             </p>
           </div>
-          <Button variant="secondary">Learn More</Button>
+          <Link href="/about">
+            <Button variant="secondary">Learn More</Button>
+          </Link>
         </div>
       </div>
     </section>

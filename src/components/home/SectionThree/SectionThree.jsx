@@ -19,7 +19,7 @@ export default function SectionThree({ title, subtitle }) {
 
 
       {/* COLUMNS GRID */}
-      <PhotoGridColumns photos={selectedPhotos} breakpoints={customBreakponts}/>
+      <PhotoGridColumns photos={selectedPhotos} breakpoints={customBreakponts} variant = "no-title"/>
       {/* <div className={styles.imagesGrid}>
         <div className={styles.column}>
           <ImageCard

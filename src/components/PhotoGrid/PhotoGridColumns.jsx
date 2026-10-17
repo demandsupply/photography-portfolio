@@ -12,7 +12,7 @@ const DEFAULT_BREAKPOINTS = {
   default: 4
 }
 
-export default function PhotoGridColumns({ categoryName, photos, breakpoints, className="" }) {
+export default function PhotoGridColumns({ categoryName, photos, breakpoints, className="", variant="default" }) {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null)
   const PHOTOS = JSONPhotos;
 
@@ -99,9 +99,10 @@ export default function PhotoGridColumns({ categoryName, photos, breakpoints, cl
                 orientation={photo.orientation}
                 alt={photo.title}
                 className={styles.imageCustomStyle}
+                variant = {variant}
               ></ImageCard>
 
-              <p className={styles.title}>{photo.title}</p>
+              {variant !== "no-title" && <p className={styles.title}>{photo.title}</p>}
             </div>
           ))}
         </div>
