@@ -29,9 +29,7 @@ export default function SectionFive() {
               cillum dolore eu fugiat nulla pariatur.
             </p>
           </div>
-          <Link href="/about">
-            <Button variant="secondary">Learn More</Button>
-          </Link>
+            <Button variant="secondary" href="/about">Learn More</Button>
         </div>
       </div>
     </section>
