@@ -18,7 +18,9 @@ export default function PortfolioPage() {
               orientation={category.orientation}
               className={styles.categoryCard}
             >
-              <h3>{category.alt}</h3>
+              <div className={styles.categoryOverlay}>
+                <h3>{category.alt}</h3>
+              </div>
             </ImageCard>
           </Link>
         ))}

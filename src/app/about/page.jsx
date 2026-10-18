@@ -4,7 +4,7 @@ import ImageCard from "@/components/ImageCard/ImageCard";
 export default function AboutPage() {
   return (
     <main>
-        <h1 className={styles.titleHidden}>Stefano Scalon</h1>
+      <h1 className={styles.titleHidden}>Stefano Scalon</h1>
       <div className={styles.container}>
 
         <div className={styles.leftBox}>
