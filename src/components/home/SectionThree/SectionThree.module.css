@@ -17,6 +17,11 @@
     font-size: var(--text-h2);
 }
 
+.selectedWorksContainer {
+  width: 100%;
+  padding: var(--spacing-md);
+}
+
 
 .imagesGrid {
   /* display: flex; */

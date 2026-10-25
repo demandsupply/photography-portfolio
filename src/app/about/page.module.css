@@ -2,7 +2,7 @@
 	max-width: 1000px;
 	margin: auto;
 	display: flex;
-	gap: var(--spacing-xxl);
+	gap: var(--spacing-xl);
 	align-items: center;
 	margin-top: var(--spacing-xl);
 }
@@ -28,6 +28,10 @@
 	text-align: center;
 }
 
+.bioContainer {
+	padding: 0 var(--spacing-md);
+}
+
 .bio {
 	margin: var(--spacing-md) 0;
 	line-height: 1.6;
@@ -37,6 +41,7 @@
 .customImgCard {
 	flex: 1;
 	align-self: flex-center;
+	max-width: 400px;
 	min-width: 0;
 	border-radius: 0;
 }
