@@ -25,7 +25,7 @@
 
 .categoriesContainer {
     width: 80%;
-    margin: var(--spacing-xl) auto;
+    margin-top: var(--spacing-xl);
     
     display: grid;
     grid-template-columns: repeat(2, 1fr);

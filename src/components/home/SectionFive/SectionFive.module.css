@@ -33,6 +33,14 @@
 
 .title {
 	margin-top: var(--spacing-lg);
+}
+
+.titleHidden {
+	margin-bottom: var(--spacing-lg);
+	display: none;
+}
+
+.titleProperties {
 	font-size: var(--text-h2);
 	font-weight: 700;
 	text-align: center;
@@ -49,6 +57,14 @@
 /*  MEDIA QUERIES */
 
 @media (max-width: 768px) {
+	
+	.titleHidden {
+		display: block;
+	}
+
+	.title {
+		display: none;
+	}
 
     .aboutContainer {
         flex-direction: column;

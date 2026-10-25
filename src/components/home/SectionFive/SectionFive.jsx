@@ -7,6 +7,7 @@ export default function SectionFive() {
   return (
     <section className={styles.sectionFive}>
       <div className={styles.aboutContainer}>
+        <h2 className={`${styles.titleHidden} ${styles.titleProperties}`}>About Me</h2>
         <ImageCard
           src="/home/sample-img-vertical.jpg"
           orientation="vertical"
@@ -14,7 +15,7 @@ export default function SectionFive() {
           variant="none"
         />
         <div className={styles.container}>
-          <h2 className={styles.title}>About Me</h2>
+          <h2 className={`${styles.title} ${styles.titleProperties}`}>About Me</h2>
           <div className={styles.aboutText}>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
