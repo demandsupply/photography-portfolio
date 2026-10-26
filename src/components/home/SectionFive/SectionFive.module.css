@@ -67,6 +67,7 @@
 	}
 
     .aboutContainer {
+		margin-top: 0;
         flex-direction: column;
         grid-template-columns: repeat(3, 3fr);
         gap: var(--spacing-md);

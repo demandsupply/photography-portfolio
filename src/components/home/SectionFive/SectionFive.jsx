@@ -2,8 +2,12 @@ import styles from "./SectionFive.module.css";
 import ImageCard from "@/components/ImageCard/ImageCard";
 import Button from "@/components/Button/Button";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function SectionFive() {
+  // fetch from it.json namespace "SectionFive"
+  const t = useTranslations('SectionFive');
+
   return (
     <section className={styles.sectionFive}>
       <div className={styles.aboutContainer}>
@@ -15,22 +19,13 @@ export default function SectionFive() {
           variant="none"
         />
         <div className={styles.container}>
-          <h2 className={`${styles.title} ${styles.titleProperties}`}>About Me</h2>
+          <h2 className={`${styles.title} ${styles.titleProperties}`}>{t('title')}</h2>
           <div className={styles.aboutText}>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur.
-            </p>
+            <p>{t('paragraphs.p1')}</p>
+            <p>{t('paragraphs.p2')}</p>
+            <p>{t('paragraphs.p3')}</p>
           </div>
-            <Button variant="secondary" href="/about">Learn More</Button>
+            <Button variant="secondary" href="/about">{t('button')}</Button>
         </div>
       </div>
     </section>
