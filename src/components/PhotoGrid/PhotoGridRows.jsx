@@ -5,7 +5,11 @@ import styles from "./PhotoGrid.module.css";
 import JSONPhotos from "@/data/photos.json";
 import LightBox from "../LightBox/LightBox";
 
-export default function PhotoGridRows({ categoryName, photos, className = "" }) {
+export default function PhotoGridRows({
+  categoryName,
+  photos,
+  className = "",
+}) {
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null);
   const [rowsWidth, setRowsWidth] = useState(700);
 
@@ -15,7 +19,6 @@ export default function PhotoGridRows({ categoryName, photos, className = "" }) 
 
   console.log("CATEGORY_PHOTOS: ");
   console.log(CATEGORY_PHOTOS);
-
 
   useEffect(() => {
     let debounceTimer;
@@ -32,7 +35,6 @@ export default function PhotoGridRows({ categoryName, photos, className = "" }) 
     window.addEventListener("resize", handleRowsWidth);
     return () => window.removeEventListener("resize", handleRowsWidth);
   }, []);
-
 
   const rows = useMemo(() => {
     const result = [];

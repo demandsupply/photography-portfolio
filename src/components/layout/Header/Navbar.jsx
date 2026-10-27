@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import styles from "./Navbar.module.css";
 import Link from "next/link";
@@ -9,17 +9,16 @@ import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const currentPath = usePathname();
 
-  const [prevPath, setPrevPath] = useState(currentPath)
+  const [prevPath, setPrevPath] = useState(currentPath);
   if (currentPath !== prevPath) {
     setPrevPath(currentPath);
     setIsOpen(false);
   }
 
-  const navRef = useRef(null)
-
+  const navRef = useRef(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -29,19 +28,19 @@ export default function Navbar() {
     // const handleDropdownOnload = () => {setIsOpen(false)}
     const handleClickOutsideDropdown = (event) => {
       if (isOpen && !navRef.current.contains(event.target)) {
-        setIsOpen(false)
+        setIsOpen(false);
       }
-    }
+    };
 
     // document.addEventListener("DOMContentLoad", handleDropdownOnload)
-    document.addEventListener("click", handleClickOutsideDropdown)
-    document.addEventListener("touch", handleClickOutsideDropdown)
+    document.addEventListener("click", handleClickOutsideDropdown);
+    document.addEventListener("touch", handleClickOutsideDropdown);
 
     return () => {
-      document.removeEventListener("click", handleClickOutsideDropdown)
-      document.removeEventListener("touch", handleClickOutsideDropdown)
-    }
-  }, [isOpen])
+      document.removeEventListener("click", handleClickOutsideDropdown);
+      document.removeEventListener("touch", handleClickOutsideDropdown);
+    };
+  }, [isOpen]);
 
   return (
     <nav ref={navRef} className={styles.nav}>
@@ -51,8 +50,16 @@ export default function Navbar() {
         </li>
       </ul>
 
-      <button className={styles.hamburgerMenu} onClick={toggleMenu} aria-label="Toggle menu">
-        {isOpen ? <IoClose className={styles.iconCustom}></IoClose> : <IoMenu className={styles.iconCustom}></IoMenu> }
+      <button
+        className={styles.hamburgerMenu}
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        {isOpen ? (
+          <IoClose className={styles.iconCustom}></IoClose>
+        ) : (
+          <IoMenu className={styles.iconCustom}></IoMenu>
+        )}
       </button>
 
       <ul className={`${styles.right} ${isOpen ? styles.dropdownMenu : ""}`}>

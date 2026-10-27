@@ -1,109 +1,103 @@
 .photoGridColumsContainer {
-    width: 100%;
-    display: grid;
-    /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
-    align-items: start;
-    gap: var(--spacing-md);
-    padding: 0 var(--spacing-md);
+  width: 100%;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  align-items: start;
+  gap: var(--spacing-md);
+  padding: 0 var(--spacing-md);
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
 }
 
 .imageGridColumnsCustomStyle {
-    width: 300px;
-    border-radius: 0;
+  width: 300px;
+  border-radius: 0;
 }
 
 .border {
-    border: 2px solid #000;
+  border: 2px solid #000;
 }
 
 .photoGridRowsContainer {
-    width: 95%;
-    margin: auto;
-    display: grid;
-    align-items: start;
-    gap: var(--spacing-md);
-
+  width: 95%;
+  margin: auto;
+  display: grid;
+  align-items: start;
+  gap: var(--spacing-md);
 }
 
 .row {
-    display: flex;
-    width: 100%;
-    border: 2px solid #000;
-    gap: var(--spacing-md);
-    align-items: stretch;
+  display: flex;
+  width: 100%;
+  border: 2px solid #000;
+  gap: var(--spacing-md);
+  align-items: stretch;
 }
 
 .imageContainer {
-    /* display: block; */
-    /* width: 0; */
-    /* object-fit: contain; */
-    /* flex-grow: 1.5; */
-    /* align-self: stretch; */
-    /* object-fit: cover; */
-    /* border-radius: 0; */
+  /* display: block; */
+  /* width: 0; */
+  /* object-fit: contain; */
+  /* flex-grow: 1.5; */
+  /* align-self: stretch; */
+  /* object-fit: cover; */
+  /* border-radius: 0; */
 }
 .imageGridRowsCustomStyle {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
-
 
 .normalRatio {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 .verticalRatio {
-    flex-grow: 1.5;
+  flex-grow: 1.5;
 }
 .horizontalRatio {
-    flex-grow: 0.666667;
+  flex-grow: 0.666667;
 }
 .lastSingleVerticalImage {
-    width: 100%;
-    max-width: 300px;
-    flex-grow: 0;
-    flex-shrink: 0;
+  width: 100%;
+  max-width: 300px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 .lastSingleHorizontalImage {
-    width: 100%;
-    max-width: 500px;
-    flex-grow: 0;
-    flex-shrink: 0;
+  width: 100%;
+  max-width: 500px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .customBottomOverlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 
-    padding: 0.7rem;
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0)
-    );
-    display: flex;
-    align-items: flex-end;
+  padding: 0.7rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
+  display: flex;
+  align-items: flex-end;
 
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .imageGridRowsCustomStyle:hover .customBottomOverlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .photoTitle {
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
 }
 
 /* 

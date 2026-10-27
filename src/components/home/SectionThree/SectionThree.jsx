@@ -4,13 +4,12 @@ import PhotoGridRows from "@/components/PhotoGrid/PhotoGridRows";
 import PhotoGridColumns from "@/components/PhotoGrid/PhotoGridColumns";
 import selectedPhotos from "@/data/selectedPhotos";
 
-
 export default function SectionThree({ title, subtitle }) {
   const customBreakponts = {
     480: 1,
     768: 2,
-    default: 3
-  }
+    default: 3,
+  };
   return (
     <section className={styles.sectionThree}>
       <h2 className={styles.title}>Selected Works</h2>
@@ -18,9 +17,12 @@ export default function SectionThree({ title, subtitle }) {
         {/* ROWS GRID */}
         {/* <PhotoGridRows photos={selectedPhotos} className={styles.imagesGrid}/> */}
 
-
         {/* COLUMNS GRID */}
-        <PhotoGridColumns photos={selectedPhotos} breakpoints={customBreakponts} variant = "no-title"/>
+        <PhotoGridColumns
+          photos={selectedPhotos}
+          breakpoints={customBreakponts}
+          variant="no-title"
+        />
         {/* <div className={styles.imagesGrid}>
           <div className={styles.column}>
             <ImageCard

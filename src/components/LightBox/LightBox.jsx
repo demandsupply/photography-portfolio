@@ -2,21 +2,15 @@
 import { useState } from "react";
 import styles from "./LightBox.module.css";
 
-export default function Lightbox({
-  photos,
-  index,
-  onClose,
-}) {
+export default function Lightbox({ photos, index, onClose }) {
   const [currentIndex, setCurrentIndex] = useState(index);
 
   // const openLightbox = (index) => setCurrentIndex(index);
   // const closeLightbox = () => setCurrentIndex(null);
 
-  const showNext = () =>
-    setCurrentIndex((prev) => (prev + 1) % photos.length);
+  const showNext = () => setCurrentIndex((prev) => (prev + 1) % photos.length);
   const showPrev = () =>
-    setCurrentIndex(
-      (prev) => (prev - 1 + photos.length) % photos.length);
+    setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length);
 
   const currentPhoto = photos[currentIndex];
   console.log("currentPhoto: ", currentPhoto.fullRes);

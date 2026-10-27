@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Bebas_Neue, } from "next/font/google";
+import { Geist, Geist_Mono, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
 import { NextIntlClientProvider } from "next-intl";
@@ -22,10 +22,8 @@ const geistMono = Geist_Mono({
 const bebasNeue = Bebas_Neue({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-heading"
-})
-
-
+  variable: "--font-heading",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -40,7 +38,7 @@ export default async function RootLayout({ children }) {
       <body className={`${bebasNeue.variable} ${geistMono.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
-            {children}
+          {children}
           <Footer />
         </NextIntlClientProvider>
       </body>

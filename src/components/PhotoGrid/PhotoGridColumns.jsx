@@ -9,11 +9,17 @@ const DEFAULT_BREAKPOINTS = {
   480: 1,
   768: 2,
   1024: 3,
-  default: 4
-}
+  default: 4,
+};
 
-export default function PhotoGridColumns({ categoryName, photos, breakpoints, className="", variant="default" }) {
-  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null)
+export default function PhotoGridColumns({
+  categoryName,
+  photos,
+  breakpoints,
+  className = "",
+  variant = "default",
+}) {
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(null);
   const PHOTOS = JSONPhotos;
 
   // fetch photos from an array of pictures OR from JSON["categoryName"]
@@ -22,37 +28,41 @@ export default function PhotoGridColumns({ categoryName, photos, breakpoints, cl
   // merge default breakpoints with props breakpoints
   const updatedBreakpoints = { ...DEFAULT_BREAKPOINTS, ...breakpoints };
 
-  let [totalColumns, setTotalColumns] = useState(updatedBreakpoints.default ?? 3);
+  let [totalColumns, setTotalColumns] = useState(
+    updatedBreakpoints.default ?? 3,
+  );
 
   useEffect(() => {
     // calculate thresholds only once
-    const thresholds = Object.keys(updatedBreakpoints).filter((key) => key !== "default").map(Number).sort((a, b) => a - b);
-    
+    const thresholds = Object.keys(updatedBreakpoints)
+      .filter((key) => key !== "default")
+      .map(Number)
+      .sort((a, b) => a - b);
+
     const handleColumnsNumber = () => {
       const width = innerWidth;
       // if (width < 480) setTotalColumns(1);
       //else if (width < 768) setTotalColumns(2);
       // else if (width < 1024) setTotalColumns(3);
       // else setTotalColumns(4);
-      
+
       let foundColumns = updatedBreakpoints.default ?? 3;
-      
+
       for (const threshold of thresholds) {
         if (width <= threshold) {
           foundColumns = updatedBreakpoints[threshold];
           break;
         }
       }
-      setTotalColumns(foundColumns)
+      setTotalColumns(foundColumns);
     };
 
     handleColumnsNumber();
     window.addEventListener("resize", handleColumnsNumber);
 
-    return () => window.removeEventListener("resize", handleColumnsNumber)
+    return () => window.removeEventListener("resize", handleColumnsNumber);
     // [] execute once, when the componet is mounted
   }, []);
-
 
   const columns = useMemo(() => {
     // create n empty arrays
@@ -88,9 +98,11 @@ export default function PhotoGridColumns({ categoryName, photos, breakpoints, cl
           {column.map((photo) => (
             <div
               onClick={() => {
-                const indexFound = photosToShow.findIndex((pts) => pts.id === photo.id)
-                setCurrentPhotoIndex(indexFound)
-              }} 
+                const indexFound = photosToShow.findIndex(
+                  (pts) => pts.id === photo.id,
+                );
+                setCurrentPhotoIndex(indexFound);
+              }}
               key={photo.id}
             >
               <ImageCard
@@ -99,10 +111,12 @@ export default function PhotoGridColumns({ categoryName, photos, breakpoints, cl
                 orientation={photo.orientation}
                 alt={photo.title}
                 className={styles.imageCustomStyle}
-                variant = {variant}
+                variant={variant}
               ></ImageCard>
 
-              {variant !== "no-title" && <p className={styles.title}>{photo.title}</p>}
+              {variant !== "no-title" && (
+                <p className={styles.title}>{photo.title}</p>
+              )}
             </div>
           ))}
         </div>
