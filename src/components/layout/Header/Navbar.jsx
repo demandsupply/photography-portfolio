@@ -8,7 +8,11 @@ import { usePathname } from "next/navigation";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
+import { useTranslations } from "next-intl";
+
 export default function Navbar() {
+  const t = useTranslations("Navigation");
+
   const [isOpen, setIsOpen] = useState(false);
   const currentPath = usePathname();
 
@@ -46,14 +50,14 @@ export default function Navbar() {
     <nav ref={navRef} className={styles.nav}>
       <ul className={styles.left}>
         <li className="headingFont">
-          <Link href={"/"}>Home</Link>
+          <Link href={"/"}>{t("home")}</Link>
         </li>
       </ul>
 
       <button
         className={styles.hamburgerMenu}
         onClick={toggleMenu}
-        aria-label="Toggle menu"
+        aria-label={t("aria.toggleMenu")}
       >
         {isOpen ? (
           <IoClose className={styles.iconCustom}></IoClose>
@@ -64,18 +68,18 @@ export default function Navbar() {
 
       <ul className={`${styles.right} ${isOpen ? styles.dropdownMenu : ""}`}>
         <li className="headingFont">
-          <Link href={"/portfolio"}>Portfolio</Link>
+          <Link href={"/portfolio"}>{t("portfolio")}</Link>
         </li>
         <li className="headingFont">
-          <Link href={"/about"}>About</Link>
+          <Link href={"/about"}>{t("about")}</Link>
           {/* <a href="/about">About</a> */}
         </li>
         <li className="headingFont">
-          <Link href={"/#"}>Link...</Link>
+          <Link href={"/#"}>{t("incoming")}</Link>
           {/* <a href="#">Link...</a> */}
         </li>
         <li className="headingFont">
-          <Link href={"/contacts"}>Contacts</Link>
+          <Link href={"/contacts"}>{t("contacts")}</Link>
           {/* <a href="/contacts">Contacts</a> */}
         </li>
       </ul>

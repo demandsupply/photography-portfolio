@@ -3,19 +3,23 @@ import styles from "./page.module.css";
 import { FaInstagram } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
 
+import { useTranslations } from "next-intl";
+
 export default function ContactsPage() {
+  const t = useTranslations("ContactsPage");
+
   return (
     <main className={styles.main}>
       <div className={styles.hero}>
-        <h1 className={styles.imgTitle}>Let&apos;s keep in touch</h1>
+        <h1 className={styles.imgTitle}>{t("title")}</h1>
         <div className={styles.contactsBox}>
           <p>
-            Email:{" "}
-            <span className={styles.contactsEmail}>scphotos@gmail.com</span>
+            {t("email")}
+            <span className={styles.contactsEmail}>{t("emailAddress")}</span>
           </p>
           <p>
-            Phone:{" "}
-            <span className={styles.contactsPhone}>+39 340 433 8900</span>
+            {t("phone")}
+            <span className={styles.contactsPhone}>{t("phoneNumber")}</span>
           </p>
           <div className={styles.socialsContainer}>
             <a href="#">

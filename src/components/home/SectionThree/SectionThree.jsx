@@ -3,16 +3,19 @@ import styles from "./SectionThree.module.css";
 import PhotoGridRows from "@/components/PhotoGrid/PhotoGridRows";
 import PhotoGridColumns from "@/components/PhotoGrid/PhotoGridColumns";
 import selectedPhotos from "@/data/selectedPhotos";
+import { useTranslations } from "next-intl";
 
 export default function SectionThree({ title, subtitle }) {
+  const t = useTranslations("SectionThree");
   const customBreakponts = {
     480: 1,
     768: 2,
     default: 3,
   };
+
   return (
     <section className={styles.sectionThree}>
-      <h2 className={styles.title}>Selected Works</h2>
+      <h2 className={styles.title}>{t("title")}</h2>
       <div className={styles.selectedWorksContainer}>
         {/* ROWS GRID */}
         {/* <PhotoGridRows photos={selectedPhotos} className={styles.imagesGrid}/> */}
