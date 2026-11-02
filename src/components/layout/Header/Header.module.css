@@ -4,10 +4,23 @@
   transition: background-color 0.3s ease;
 }
 
-.headerHome {
+.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+}
+
+.headerAbsolute {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.headerPagesRelative {
+  position: relative;
+}
+
+.headerHomeTop {
   background-color: transparent;
   background: linear-gradient(
     to bottom,
@@ -17,8 +30,8 @@
 }
 
 .headerPages {
-  position: relative;
   background-color: var(--almost-black);
+  background-image: none;
 }
 
 /* MEDIA QUERIES */
