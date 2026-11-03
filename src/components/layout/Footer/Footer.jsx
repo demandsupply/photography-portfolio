@@ -3,6 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
 
 import { useTranslations } from "next-intl";
+import { SITE_CONFIG } from "@/config/site";
 
 export default function Footer() {
   const t = useTranslations("Footer");
@@ -15,10 +16,10 @@ export default function Footer() {
         <section className={styles.column}>
           <h3 className={styles.columnTitle}>{t("siteName")}</h3>
           <div className={styles.socialsContainer}>
-            <a href="#">
+            <a href={SITE_CONFIG.instagram_url} target="_blank">
               <FaInstagram size={24} />
             </a>
-            <a href="#">
+            <a href={SITE_CONFIG.facebook_url} target="_blank">
               <FiFacebook size={24} />
             </a>
           </div>
@@ -50,11 +51,11 @@ export default function Footer() {
           <div className={styles.contactsContainer}>
             <p>
               {tContacts("email")}
-              <span>{tContacts("emailAddress")}</span>
+              <span>{SITE_CONFIG.email}</span>
             </p>
             <p>
               {tContacts("phone")}
-              <span>{tContacts("phoneNumber")}</span>
+              <span>{SITE_CONFIG.phone}</span>
             </p>
           </div>
         </section>
@@ -76,10 +77,10 @@ export default function Footer() {
         <p>{t("tagline")}</p>
 
         <div className={styles.socialsContainer}>
-          <a href="#">
+          <a href={SITE_CONFIG.instagram_url} target="_blank">
             <FaInstagram size={24} />
           </a>
-          <a href="#">
+          <a href={SITE_CONFIG.facebook_url} target="_blank">
             <FiFacebook size={24} />
           </a>
         </div>
@@ -87,11 +88,11 @@ export default function Footer() {
         <div className={styles.contactsContainer}>
           <p>
             {t("email")}
-            <span>{t("emailAddress")}</span>
+            <span>{SITE_CONFIG.email}</span>
           </p>
           <p>
             {t("phone")}
-            <span>{t("phoneNumber")}</span>
+            <span>{SITE_CONFIG.phone}</span>
           </p>
         </div>
 
