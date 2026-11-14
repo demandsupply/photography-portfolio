@@ -1,0 +1,71 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "about": "About Me",
+    "incoming": "Incoming...",
+    "contacts": "Contacts",
+    "aria": {
+      "toggleMenu": "Open/Close menu"
+    }
+  },
+  "Footer": {
+    "siteName": "SCPhotos",
+    "siteMapTitle": "Mappa del Sito",
+    "contactsTitle": "Contatti",
+    "usefulLinksTitle": "Link Utili",
+    "tagline": "Frase ad effetto",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy",
+    "email": "Email: ",
+    "emailAddress": "scphotos@gmail.com",
+    "phone": "Telefono: ",
+    "phoneNumber": "+39 320 567 9838",
+    "copyright": "© 2026. Stefano Scalon - Tutti i diritti sono riservati."
+  },
+  "SectionTwo": {
+    "title": "A Visual Study by Stefano",
+    "subtitle": "Quiet observations in a loud world"
+  },
+  "SectionThree": {
+    "title": "Selected Works"
+  },
+  "SectionFour": {
+    "title": "Portfolio"
+  },
+  "Categories": {
+    "portraits": "Ritratti",
+    "events": "Eventi",
+    "landscapes": "Paesaggi",
+    "still-life": "Still Life",
+    "altre": "Altre"
+  },
+  "SectionFive": {
+    "title": "About Me",
+    "paragraphs": {
+      "p1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "p2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "p3": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    },
+    "button": "Approfondisci"
+  },
+  "PortfolioPage": {
+    "title": "Categorie"
+  },
+  "AboutPage": {
+    "title": "Stefano Scalon",
+    "paragraphs": {
+      "p1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "p2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "p3": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "p4": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    }
+  },
+  "ContactsPage": {
+    "title": "Restiamo in Contatto",
+    "email": "Email: ",
+    "emailAddress": "scphotos@gmail.com",
+    "phone": "Telefono: ",
+    "phoneNumber": "+39 320 567 9838"
+  }
+}
