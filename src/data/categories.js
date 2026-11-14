@@ -23,8 +23,8 @@ export const CATEGORIES = [
   {
     id: 4,
     src: "/home/sample-img-horizontal.jpg",
-    alt: "Still Life",
+    alt: "Altre",
     orientation: "horizontal",
-    slug: "still-life",
+    slug: "altre",
   },
 ];
