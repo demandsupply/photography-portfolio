@@ -1,3 +1,4 @@
+import { createNavigation } from "next-intl/navigation";
 import { defineRouting } from "next-intl/routing";
 
 export const routing = defineRouting({
@@ -6,3 +7,6 @@ export const routing = defineRouting({
   // remove it to use browser's default language
   localeDetection: false,
 });
+
+export const { Link, redirect, usePathname, useRouter } =
+  createNavigation(routing);
