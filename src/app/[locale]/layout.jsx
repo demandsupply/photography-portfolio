@@ -40,7 +40,6 @@ export default async function RootLayout({ children }) {
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
-          <LanguageSwitcher />
           <Footer />
         </NextIntlClientProvider>
       </body>

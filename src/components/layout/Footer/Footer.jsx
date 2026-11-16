@@ -5,6 +5,8 @@ import { FiFacebook } from "react-icons/fi";
 import { useTranslations } from "next-intl";
 import { SITE_CONFIG } from "@/config/site";
 
+import LanguageSwitcher from "@/components/LanguageSwitcher/LanguageSwitcher";
+
 export default function Footer() {
   const t = useTranslations("Footer");
   const tContacts = useTranslations("ContactsPage");
@@ -12,6 +14,8 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
+      <LanguageSwitcher />
+
       <div className={styles.footerGrid}>
         <section className={styles.column}>
           <h3 className={styles.columnTitle}>{t("siteName")}</h3>
