@@ -7,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
 
 export default function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const isHome = pathname === "/it" || pathname === "/en";
 
   // keep the vertical header translation and trigger the render when changes
   const [translateHeaderY, setTranslateHeaderY] = useState(0);
