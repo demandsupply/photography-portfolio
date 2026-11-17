@@ -2,6 +2,7 @@
 
 import { useRouter, usePathname } from "@/i18n/routing";
 import { useLocale } from "next-intl";
+import { useState, useEffect, useTransition } from "react";
 import styles from "./LanguageSwitcher.module.css";
 
 export default function LanguageSwitcher() {
@@ -11,7 +12,7 @@ export default function LanguageSwitcher() {
 
   const changeLanguage = (e) => {
     const switchLocale = e.target.checked ? "en" : "it";
-    router.replace(pathname, { locale: switchLocale });
+    router.replace(pathname, { locale: switchLocale, scroll: false });
   };
   return (
     <div className={styles.container}>
@@ -22,10 +23,11 @@ export default function LanguageSwitcher() {
       </span>
       <label className={styles.switch}>
         <input
+          key={locale}
           type="checkbox"
           role="switch"
           className={styles.input}
-          checked={locale === "en"}
+          defaultChecked={locale === "en"}
           onChange={changeLanguage}
           aria-label="Selettore-lingua"
         />

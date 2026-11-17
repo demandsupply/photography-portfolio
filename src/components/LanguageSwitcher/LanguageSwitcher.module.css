@@ -16,7 +16,7 @@
   font-size: 12px;
   font-weight: 700;
   color: var(--light-grey);
-  transition: color 0.2s ease;
+  transition: color 1s ease;
 }
 
 .active {
@@ -55,7 +55,7 @@
   height: 12px;
   background-color: #ffffff;
   border-radius: 50%;
-  transition: transform 0.2s ease;
+  transition: transform 1s cubic-bezier(0.165, 0.7, 0.7, 1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
