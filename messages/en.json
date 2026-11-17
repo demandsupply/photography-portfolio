@@ -11,17 +11,17 @@
   },
   "Footer": {
     "siteName": "SCPhotos",
-    "siteMapTitle": "Mappa del Sito",
-    "contactsTitle": "Contatti",
-    "usefulLinksTitle": "Link Utili",
-    "tagline": "Frase ad effetto",
+    "siteMapTitle": "Site Map",
+    "contactsTitle": "Contacts",
+    "usefulLinksTitle": "Useful Links",
+    "tagline": "Cool phrase",
     "privacy": "Privacy Policy",
     "cookie": "Cookie Policy",
     "email": "Email: ",
     "emailAddress": "scphotos@gmail.com",
-    "phone": "Telefono: ",
+    "phone": "Phone: ",
     "phoneNumber": "+39 320 567 9838",
-    "copyright": "© 2026. Stefano Scalon - Tutti i diritti sono riservati."
+    "copyright": "© 2026. Stefano Scalon - All rights reserved."
   },
   "SectionTwo": {
     "title": "A Visual Study by Stefano",
@@ -34,11 +34,11 @@
     "title": "Portfolio"
   },
   "Categories": {
-    "portraits": "Ritratti",
-    "events": "Eventi",
-    "landscapes": "Paesaggi",
+    "portraits": "Portraits",
+    "events": "Events",
+    "landscapes": "Landscapes",
     "still-life": "Still Life",
-    "altre": "Altre"
+    "altre": "Others"
   },
   "SectionFive": {
     "title": "About Me",
@@ -47,10 +47,10 @@
       "p2": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       "p3": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
     },
-    "button": "Approfondisci"
+    "button": "Read more"
   },
   "PortfolioPage": {
-    "title": "Categorie"
+    "title": "Categories"
   },
   "AboutPage": {
     "title": "Stefano Scalon",
@@ -62,10 +62,10 @@
     }
   },
   "ContactsPage": {
-    "title": "Restiamo in Contatto",
+    "title": "Let's Keep in Touch",
     "email": "Email: ",
     "emailAddress": "scphotos@gmail.com",
-    "phone": "Telefono: ",
+    "phone": "Phone: ",
     "phoneNumber": "+39 320 567 9838"
   }
 }
