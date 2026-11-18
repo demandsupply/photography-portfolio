@@ -18,9 +18,28 @@
 }
 
 .nav a {
+  position: relative;
+  display: inline-block;
   padding: var(--spacing-md);
   font-size: var(--text-xl);
   font-weight: 600;
+  color: var(--dirty-white);
+}
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  left: var(--spacing-md);
+  /* header links with letter-spacing = 0.25em; need to subtract some space */
+  right: calc(var(--spacing-md) + 0.15em);
+  height: 2.5px;
+  background-color: var(--dirty-white);
+
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.35s ease;
+}
+.nav a:hover::after {
+  clip-path: inset(0 0 0 0);
 }
 
 .hamburgerMenu {
